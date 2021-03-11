@@ -64,6 +64,14 @@
 		},
 		{
 			"type": "plugin",
+			"id": "gamepad",
+			"name": "Gamepad",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "TiledBg",
 			"name": "Tiled Background",
 			"author": "Scirra",
@@ -79,9 +87,33 @@
 			"bundled": false
 		},
 		{
-			"type": "plugin",
-			"id": "gamepad",
-			"name": "Gamepad",
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
 			"author": "Scirra",
 			"version": "r234.4",
 			"bundled": false
@@ -104,14 +136,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Platform",
-			"name": "Platform",
-			"author": "Scirra",
-			"version": "r234.4",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "scrollto",
 			"name": "Scroll To",
 			"author": "Scirra",
@@ -128,32 +152,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Physics",
-			"name": "Physics",
-			"author": "Scirra",
-			"version": "r234.4",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "Sin",
 			"name": "Sine",
-			"author": "Scirra",
-			"version": "r234.4",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Bullet",
-			"name": "Bullet",
-			"author": "Scirra",
-			"version": "r234.4",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Rotate",
-			"name": "Rotate",
 			"author": "Scirra",
 			"version": "r234.4",
 			"bundled": false
@@ -201,63 +201,7 @@
 	],
 	"uniqueId": "9jihr745wjs",
 	"objectTypes": {
-		"items": [
-			"AreiaSom",
-			"Item",
-			"HuDGaru",
-			"HPBarra",
-			"MPBarra",
-			"FundoBarraHp",
-			"MPFundoBarra",
-			"habilidadesFundo",
-			"Skillpoints",
-			"Arms",
-			"ItensHud",
-			"Bau",
-			"Sack",
-			"ArmsSelect",
-			"TiledBackground",
-			"TiledBackground2",
-			"TiledBackground3",
-			"HpMain",
-			"HpBarInimigo",
-			"espada",
-			"boxlateral",
-			"tapaburaco",
-			"dCaixa",
-			"ContDamaged",
-			"Amon",
-			"Krish",
-			"Stop",
-			"slide",
-			"NamesCharacters",
-			"MostraDanoInimigo",
-			"hitColisionLight",
-			"hitColisionHeavy",
-			"hitColisionBullet",
-			"FortitudeIcon",
-			"GroundmagicIcon",
-			"LionIcon",
-			"MagicalBladeIcon",
-			"ShockWaveIcon",
-			"SpinIcon",
-			"SpiritOfDecayIcon",
-			"Runners",
-			"atributosSprites",
-			"cursorOverlappingBox",
-			"NameSkill",
-			"Sprite",
-			"SpriteFont2",
-			"CinematicFont",
-			"NameSkill2",
-			"FontDescription",
-			"Knife",
-			"Comandos",
-			"Gnolly",
-			"Jatayu",
-			"ArcadeControl",
-			"Gamepad"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
@@ -266,7 +210,16 @@
 					"PlayerBase",
 					"Camera"
 				],
-				"subfolders": [],
+				"subfolders": [
+					{
+						"items": [
+							"espada",
+							"Knife"
+						],
+						"subfolders": [],
+						"name": "projectiles"
+					}
+				],
 				"name": "Personagem"
 			},
 			{
@@ -304,10 +257,11 @@
 					"Audio",
 					"Function",
 					"Keyboard",
-					"Dictionary"
+					"Dictionary",
+					"Gamepad"
 				],
 				"subfolders": [],
-				"name": "Function"
+				"name": "Input and components"
 			},
 			{
 				"items": [
@@ -315,7 +269,9 @@
 					"Rompo",
 					"Garuda",
 					"Detector",
-					"DetectorPiterodatilo"
+					"DetectorPiterodatilo",
+					"Jatayu",
+					"Gnolly"
 				],
 				"subfolders": [],
 				"name": "Enemies"
@@ -381,6 +337,92 @@
 				],
 				"subfolders": [],
 				"name": "Arrays"
+			},
+			{
+				"items": [
+					"CinematicFont",
+					"FontDescription",
+					"SpriteFont2",
+					"atributosSprites",
+					"ContDamaged",
+					"MostraDanoInimigo",
+					"NamesCharacters",
+					"NameSkill",
+					"NameSkill2"
+				],
+				"subfolders": [],
+				"name": "Fonts"
+			},
+			{
+				"items": [
+					"tapaburaco",
+					"TiledBackground",
+					"TiledBackground2",
+					"TiledBackground3"
+				],
+				"subfolders": [],
+				"name": "background"
+			},
+			{
+				"items": [
+					"Bau",
+					"Item",
+					"Sack"
+				],
+				"subfolders": [],
+				"name": "Items"
+			},
+			{
+				"items": [
+					"Arms",
+					"ArmsSelect",
+					"HpBarInimigo",
+					"HPBarra",
+					"HpMain",
+					"HuDGaru",
+					"ItensHud",
+					"MPBarra",
+					"MPFundoBarra",
+					"FundoBarraHp"
+				],
+				"subfolders": [],
+				"name": "HUD"
+			},
+			{
+				"items": [
+					"hitColisionBullet",
+					"hitColisionHeavy",
+					"hitColisionLight"
+				],
+				"subfolders": [],
+				"name": "VFX"
+			},
+			{
+				"items": [
+					"Amon",
+					"ArcadeControl",
+					"AreiaSom",
+					"boxlateral",
+					"Comandos",
+					"cursorOverlappingBox",
+					"dCaixa",
+					"FortitudeIcon",
+					"GroundmagicIcon",
+					"habilidadesFundo",
+					"Krish",
+					"LionIcon",
+					"MagicalBladeIcon",
+					"Runners",
+					"ShockWaveIcon",
+					"Skillpoints",
+					"slide",
+					"SpinIcon",
+					"SpiritOfDecayIcon",
+					"Sprite",
+					"Stop"
+				],
+				"subfolders": [],
+				"name": "OTHERS"
 			}
 		]
 	},

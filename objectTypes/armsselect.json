@@ -1,0 +1,44 @@
+{
+	"name": "ArmsSelect",
+	"plugin-id": "Sprite",
+	"sid": 292808816130976,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "posicaoSelector",
+			"type": "number",
+			"desc": "",
+			"sid": 429505995230748
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 21,
+						"height": 20,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 275,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 709374478571676,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

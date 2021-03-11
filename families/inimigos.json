@@ -1,0 +1,164 @@
+{
+	"name": "Inimigos",
+	"plugin-id": "Sprite",
+	"sid": 576677935970344,
+	"instanceVariables": [
+		{
+			"name": "Ativo",
+			"type": "boolean",
+			"desc": "",
+			"sid": 373576944856392
+		},
+		{
+			"name": "inimigo",
+			"type": "string",
+			"desc": "",
+			"sid": 500302560471255
+		},
+		{
+			"name": "Timer",
+			"type": "number",
+			"desc": "",
+			"sid": 288094411276600
+		},
+		{
+			"name": "Decisao",
+			"type": "number",
+			"desc": "",
+			"sid": 845950439734769
+		},
+		{
+			"name": "Vida",
+			"type": "number",
+			"desc": "",
+			"sid": 381044381481478
+		},
+		{
+			"name": "Patrulha",
+			"type": "boolean",
+			"desc": "",
+			"sid": 379443379279084
+		},
+		{
+			"name": "Alerta",
+			"type": "boolean",
+			"desc": "",
+			"sid": 629462909271150
+		},
+		{
+			"name": "Run",
+			"type": "boolean",
+			"desc": "",
+			"sid": 219728521108059
+		},
+		{
+			"name": "Hurt",
+			"type": "boolean",
+			"desc": "",
+			"sid": 715392803023682
+		},
+		{
+			"name": "CanBeKnockedBack",
+			"type": "boolean",
+			"desc": "",
+			"sid": 344879473442215
+		},
+		{
+			"name": "KnockbackTimer",
+			"type": "number",
+			"desc": "",
+			"sid": 721345202353489
+		},
+		{
+			"name": "DefaultMaxSpeed",
+			"type": "number",
+			"desc": "",
+			"sid": 557713032859481
+		},
+		{
+			"name": "Atk",
+			"type": "number",
+			"desc": "",
+			"sid": 950448860709869
+		},
+		{
+			"name": "Def",
+			"type": "number",
+			"desc": "",
+			"sid": 753060657548691
+		},
+		{
+			"name": "CanBeDamage",
+			"type": "boolean",
+			"desc": "",
+			"sid": 191855182443691
+		},
+		{
+			"name": "confBar",
+			"type": "boolean",
+			"desc": "",
+			"sid": 908681418851598
+		},
+		{
+			"name": "VidaMax",
+			"type": "number",
+			"desc": "",
+			"sid": 938467689509499
+		},
+		{
+			"name": "cDamaged",
+			"type": "number",
+			"desc": "",
+			"sid": 918316169698834
+		},
+		{
+			"name": "estado",
+			"type": "string",
+			"desc": "",
+			"sid": 789906340811963
+		},
+		{
+			"name": "inimigoId",
+			"type": "string",
+			"desc": "",
+			"sid": 479901803618401
+		},
+		{
+			"name": "X_bar",
+			"type": "number",
+			"desc": "",
+			"sid": 414117353031502
+		},
+		{
+			"name": "Y_bar",
+			"type": "number",
+			"desc": "",
+			"sid": 834368642919988
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform2",
+			"sid": 554486979534775
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 249877392555197
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 327495120824362
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Enemy",
+		"Rompo",
+		"Garuda",
+		"Gnolly",
+		"Jatayu"
+	]
+}

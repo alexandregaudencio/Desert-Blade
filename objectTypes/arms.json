@@ -1,0 +1,50 @@
+{
+	"name": "Arms",
+	"plugin-id": "Sprite",
+	"sid": 942154108144908,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "timer",
+			"type": "number",
+			"desc": "",
+			"sid": 178981524924138
+		},
+		{
+			"name": "estado",
+			"type": "string",
+			"desc": "",
+			"sid": 708475022538093
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 61,
+						"height": 36,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 274,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 741422686332657,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

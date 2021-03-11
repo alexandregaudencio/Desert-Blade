@@ -1,0 +1,179 @@
+{
+	"name": "Consumiveis",
+	"plugin-id": "Sprite",
+	"sid": 543951810736693,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "ConsumivelKey",
+			"type": "number",
+			"desc": "",
+			"sid": 731450143318953
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 11,
+						"height": 13,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 270,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 359348927197572,
+				"name": "Apple",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 13,
+						"height": 13,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 117,
+						"collisionPoly": {
+							"points": [
+								0.23076923076923078,
+								0.23076923076923078,
+								0.46153846153846156,
+								0.07692307692307693,
+								0.6923076923076923,
+								0.15384615384615385,
+								0.8461538461538461,
+								0.46153846153846156,
+								0.6923076923076923,
+								0.6923076923076923,
+								0.46153846153846156,
+								0.8461538461538461,
+								0.15384615384615385,
+								0.6923076923076923,
+								0.07692307692307693,
+								0.46153846153846156
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 837866522589186,
+				"name": "Melon",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 11,
+						"height": 10,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 187,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 465255689735708,
+				"name": "Orange",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 9,
+						"height": 14,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 268,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 668205038259035,
+				"name": "PineappleJuice",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 9,
+						"height": 14,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 273,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 533985805402283,
+				"name": "LemonJuice",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 13,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 276,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 726210799510235,
+				"name": "WaterBottle",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

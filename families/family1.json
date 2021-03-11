@@ -1,0 +1,13 @@
+{
+	"name": "Family1",
+	"plugin-id": "Sprite",
+	"sid": 843260296595536,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"plataformaMovel_v",
+		"plataformaMovel_v2",
+		"plataformaTimer"
+	]
+}

@@ -1,0 +1,3761 @@
+{
+	"name": "eEnemies",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Rompo",
+					"sid": 834847187636169
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 206021223645674,
+					"parameters": {
+						"object-to-create": "Detector",
+						"layer": "Rompo.LayerName",
+						"x": "Rompo.ImagePointX(\"Detector\")",
+						"y": "Rompo.ImagePointY(\"Detector\")",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Detector",
+					"sid": 541879612132505,
+					"parameters": {
+						"instance-variable": "inimigoID",
+						"value": "Rompo.UID"
+					}
+				}
+			],
+			"sid": 790062504487168
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Garuda",
+					"sid": 837590849032715
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 649238784691761,
+					"parameters": {
+						"object-to-create": "DetectorPiterodatilo",
+						"layer": "Garuda.LayerName",
+						"x": "Garuda.ImagePointX(\"Detector\")",
+						"y": "Garuda.ImagePointY(\"Detector\")",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "DetectorPiterodatilo",
+					"sid": 338539671060952,
+					"parameters": {
+						"instance-variable": "inimigoID",
+						"value": "Garuda.UID"
+					}
+				}
+			],
+			"sid": 222635052100395
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-function",
+					"objectClass": "Function",
+					"sid": 293755850804748,
+					"parameters": {
+						"name": "\"DropItem\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 765975858270536,
+					"parameters": {
+						"object-to-create": "Consumiveis",
+						"layer": "Garuda.LayerName",
+						"x": "Function.Param(0)",
+						"y": "Function.Param(1)",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 318414560536992
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 734608149624226
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Inimigos",
+					"sid": 819993569397274,
+					"parameters": {
+						"animation": "Inimigos.estado & \"_\" & Inimigos.inimigoId",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 872581226030587
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "pick-by-comparison",
+					"objectClass": "System",
+					"sid": 268808486823795,
+					"parameters": {
+						"object": "Inimigos",
+						"expression": "distance(Inimigos.X,Inimigos.Y,PlayerBase.X,PlayerBase.Y)",
+						"comparison": 2,
+						"value": "150"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Inimigos",
+					"sid": 735691580201737,
+					"parameters": {
+						"instance-variable": "Ativo"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Inimigos",
+					"sid": 786015542179941,
+					"parameters": {
+						"instance-variable": "Ativo",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 128990742258566
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 332979701367689
+				},
+				{
+					"id": "pick-by-comparison",
+					"objectClass": "System",
+					"sid": 410477832768877,
+					"parameters": {
+						"object": "Inimigos",
+						"expression": "distance(Inimigos.X,Inimigos.Y,PlayerBase.X,PlayerBase.Y)",
+						"comparison": 4,
+						"value": "600"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Inimigos",
+					"sid": 780857411318695,
+					"parameters": {
+						"instance-variable": "Ativo",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 319874070265295
+		},
+		{
+			"eventType": "comment",
+			"text": "ROMPO"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "pick-by-comparison",
+					"objectClass": "System",
+					"sid": 846704811542507,
+					"parameters": {
+						"object": "Rompo",
+						"expression": "distance(Rompo.x,Rompo.Y,PlayerBase.X,PlayerBase.Y)",
+						"comparison": 2,
+						"value": "150"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Inimigos",
+					"sid": 616264536219695,
+					"parameters": {
+						"instance-variable": "Ativo"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 240784812596252,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 948448309780229,
+							"parameters": {
+								"object": "Rompo"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 457527227127982,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Rompo",
+									"sid": 634523728297202,
+									"parameters": {
+										"instance-variable": "direction",
+										"comparison": 0,
+										"value": "\"right\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 203052980921092,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "Rompo",
+											"sid": 231611369109271,
+											"parameters": {
+												"comparison": 4,
+												"x-co-ordinate": "PlayerBase.X"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Rompo",
+											"sid": 815524287982073,
+											"parameters": {
+												"instance-variable": "Ativando",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 367396535951553,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Rompo",
+													"sid": 638098518486663,
+													"parameters": {
+														"instance-variable": "Ativando"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 631925506104717,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 183208273329370
+														}
+													],
+													"actions": [
+														{
+															"id": "set-visible",
+															"objectClass": "Rompo",
+															"sid": 842498976642835,
+															"parameters": {
+																"visibility": "visible"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Rompo",
+															"sid": 544209955857126,
+															"parameters": {
+																"instance-variable": "estado",
+																"value": "\"Ativando\""
+															}
+														}
+													],
+													"sid": 241363395547261
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Rompo",
+									"sid": 262452883697684,
+									"parameters": {
+										"instance-variable": "direction",
+										"comparison": 0,
+										"value": "\"left\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 307096176038089,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "Rompo",
+											"sid": 741800912559517,
+											"parameters": {
+												"comparison": 2,
+												"x-co-ordinate": "PlayerBase.X"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Rompo",
+											"sid": 576624201908257,
+											"parameters": {
+												"instance-variable": "Ativando",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 842579999878223,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Rompo",
+													"sid": 846337634289287,
+													"parameters": {
+														"instance-variable": "Ativando"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 640742135200555,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 462092901886610
+														}
+													],
+													"actions": [
+														{
+															"id": "set-visible",
+															"objectClass": "Rompo",
+															"sid": 960155652672594,
+															"parameters": {
+																"visibility": "visible"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Rompo",
+															"sid": 125228237889887,
+															"parameters": {
+																"instance-variable": "estado",
+																"value": "\"Ativando\""
+															}
+														}
+													],
+													"sid": 623418943203657
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 430422864247925,
+					"parameters": {
+						"object": "Rompo"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 391028078179039,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Rompo",
+							"sid": 391251903807889,
+							"parameters": {
+								"instance-variable": "Ativando"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 319570918701813,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 240766200762956,
+									"parameters": {
+										"object": "HpMain",
+										"expression": "HpMain.InimigoUID",
+										"comparison": 0,
+										"value": "Rompo.UID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "HpMain",
+									"sid": 420962014414191,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 271700268030902
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 915435427076860,
+									"parameters": {
+										"object": "HpBarInimigo",
+										"expression": "HpBarInimigo.InimigoUID",
+										"comparison": 0,
+										"value": "Rompo.UID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "HpBarInimigo",
+									"sid": 488656321071226,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 718256552761427
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "pick-by-comparison",
+					"objectClass": "System",
+					"sid": 471672150791717,
+					"parameters": {
+						"object": "Rompo",
+						"expression": "distance(Rompo.x,Rompo.Y,PlayerBase.X,PlayerBase.Y)",
+						"comparison": 4,
+						"value": "150"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Rompo",
+					"sid": 136491907599572,
+					"parameters": {
+						"instance-variable": "Ativo"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Rompo",
+					"sid": 280368514074431,
+					"parameters": {
+						"instance-variable": "estado",
+						"value": "\"Inativo\""
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Rompo",
+					"sid": 747449226073732,
+					"parameters": {
+						"instance-variable": "CanBeDamage",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 486403929966036
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "Rompo",
+					"sid": 798242082497867,
+					"parameters": {
+						"animation": "\"Ativando_1\""
+					}
+				},
+				{
+					"id": "on-animation-finished",
+					"objectClass": "Rompo",
+					"sid": 599734356426844,
+					"parameters": {
+						"animation": "\"Ativando_2\""
+					}
+				},
+				{
+					"id": "on-animation-finished",
+					"objectClass": "Rompo",
+					"sid": 843609123949748,
+					"parameters": {
+						"animation": "\"Ativando_3\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Rompo",
+					"sid": 820182198902889,
+					"parameters": {
+						"instance-variable": "estado",
+						"value": "\"Left\""
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Rompo",
+					"sid": 381036000288301,
+					"parameters": {
+						"instance-variable": "CanBeDamage",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-vector-y",
+					"objectClass": "Rompo",
+					"sid": 613980098844855,
+					"behaviorType": "Platform2",
+					"parameters": {
+						"vector-y": "-300"
+					}
+				}
+			],
+			"sid": 953105431355113,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "pick-by-comparison",
+					"objectClass": "System",
+					"sid": 877182839100881,
+					"parameters": {
+						"object": "Rompo",
+						"expression": "distance(Rompo.x,Rompo.Y,PlayerBase.X,PlayerBase.Y)",
+						"comparison": 3,
+						"value": "100"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Rompo",
+					"sid": 854948174899611,
+					"parameters": {
+						"instance-variable": "Ativo"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Rompo",
+					"sid": 201045051111359,
+					"parameters": {
+						"instance-variable": "CanBeDamage"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 720454501759325,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 420473788447783,
+							"parameters": {
+								"object": "Rompo"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 926011180290574,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Rompo",
+									"sid": 513625657528078,
+									"parameters": {
+										"instance-variable": "Hurt"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 148772866822742,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 119046929687359,
+											"parameters": {
+												"object": "Detector",
+												"expression": "Detector.inimigoID",
+												"comparison": 0,
+												"value": "Rompo.UID"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 487551889233967,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-comparison",
+													"objectClass": "System",
+													"sid": 670620559855742,
+													"parameters": {
+														"object": "HpMain",
+														"expression": "HpMain.InimigoUID",
+														"comparison": 0,
+														"value": "Rompo.UID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "HpMain",
+													"sid": 148112759861252,
+													"parameters": {
+														"visibility": "visible"
+													}
+												}
+											],
+											"sid": 192469634482404
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-comparison",
+													"objectClass": "System",
+													"sid": 900174998909644,
+													"parameters": {
+														"object": "HpBarInimigo",
+														"expression": "HpBarInimigo.InimigoUID",
+														"comparison": 0,
+														"value": "Rompo.UID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "HpBarInimigo",
+													"sid": 369332817574931,
+													"parameters": {
+														"visibility": "visible"
+													}
+												}
+											],
+											"sid": 509663495789349
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-x",
+													"objectClass": "Rompo",
+													"sid": 619325101388929,
+													"parameters": {
+														"comparison": 4,
+														"x-co-ordinate": "PlayerBase.X"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Rompo",
+													"sid": 844279629704959,
+													"parameters": {
+														"instance-variable": "estado",
+														"value": "\"Left\""
+													}
+												},
+												{
+													"id": "simulate-control",
+													"objectClass": "Rompo",
+													"sid": 133102176530970,
+													"behaviorType": "Platform2",
+													"parameters": {
+														"control": "left"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 568691148913092,
+													"parameters": {
+														"seconds": "1.0"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Rompo",
+													"sid": 500437822393036,
+													"parameters": {
+														"instance-variable": "direction",
+														"value": "\"left\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Rompo",
+													"sid": 446696781285083,
+													"parameters": {
+														"animation": "\"Inativo\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Rompo",
+													"sid": 201573417748988,
+													"parameters": {
+														"instance-variable": "CanBeDamage",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Rompo",
+													"sid": 563408356245479,
+													"parameters": {
+														"instance-variable": "Ativando",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "Rompo",
+													"sid": 490572711784230,
+													"disabled": true,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 608298576262829
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 999597607195418
+												}
+											],
+											"actions": [
+												{
+													"id": "simulate-control",
+													"objectClass": "Rompo",
+													"sid": 716187836931992,
+													"behaviorType": "Platform2",
+													"parameters": {
+														"control": "right"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Rompo",
+													"sid": 848048761205088,
+													"parameters": {
+														"instance-variable": "estado",
+														"value": "\"Right\""
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 594618137450404,
+													"parameters": {
+														"seconds": "1.0"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Rompo",
+													"sid": 864225927174624,
+													"parameters": {
+														"instance-variable": "direction",
+														"value": "\"right\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Rompo",
+													"sid": 378839011673395,
+													"parameters": {
+														"instance-variable": "estado",
+														"value": "\"Inativo\""
+													}
+												},
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Rompo",
+													"sid": 891905915145757,
+													"parameters": {
+														"instance-variable": "CanBeDamage",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Rompo",
+													"sid": 393572931405550,
+													"parameters": {
+														"instance-variable": "Ativando",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "Rompo",
+													"sid": 203883248805143,
+													"disabled": true,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 755803750887131
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-collision-with-another-object",
+													"objectClass": "Rompo",
+													"sid": 390949267617183,
+													"parameters": {
+														"object": "PlayerBase"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Rompo",
+													"sid": 738273416923751,
+													"parameters": {
+														"instance-variable": "CanBeDamage",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Rompo",
+													"sid": 982152310337976,
+													"parameters": {
+														"instance-variable": "estado",
+														"value": "\"Inativo\""
+													}
+												},
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Rompo",
+													"sid": 409426275532540,
+													"parameters": {
+														"instance-variable": "Ativando",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 525710209903855
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Rosa"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "pick-by-comparison",
+					"objectClass": "System",
+					"sid": 978947232655907,
+					"parameters": {
+						"object": "Enemy",
+						"expression": "distance(Enemy.x,Enemy.Y,PlayerBase.X,PlayerBase.Y)",
+						"comparison": 3,
+						"value": "100"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Enemy",
+					"sid": 512570904645968,
+					"parameters": {
+						"instance-variable": "Ativo"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 731886746237111,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 249968131445130,
+							"disabled": true,
+							"parameters": {
+								"object": "Enemy"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Enemy",
+							"sid": 963672817299137,
+							"disabled": true,
+							"parameters": {
+								"animation": "\"Animation 1\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Enemy",
+							"sid": 586473173661709,
+							"parameters": {
+								"instance-variable": "estado",
+								"value": "\"Attack\""
+							}
+						}
+					],
+					"sid": 143345029289170,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Enemy",
+									"sid": 489102553940558,
+									"parameters": {
+										"comparison": 0,
+										"number": "3"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Enemy",
+									"sid": 844081069784852,
+									"parameters": {
+										"instance-variable": "estado",
+										"comparison": 0,
+										"value": "\"Attack\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 955485611391016,
+									"parameters": {
+										"name": "\"inimigoatira\"",
+										"parameter-n": [
+											"Enemy.UID"
+										]
+									}
+								}
+							],
+							"sid": 319604836670863,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-mirrored",
+											"objectClass": "Enemy",
+											"sid": 503085781805756
+										},
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 205322075889947
+										}
+									],
+									"actions": [],
+									"sid": 747697434950731,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 925024093387058
+										},
+										{
+											"id": "is-mirrored",
+											"objectClass": "Enemy",
+											"sid": 377453570328215,
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Enemy",
+											"sid": 127348597523831,
+											"parameters": {
+												"object": "Petala",
+												"layer": "Enemy.LayerName",
+												"image-point": "1",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-vector-x",
+											"objectClass": "Petala",
+											"sid": 136454527088949,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-x": "random(-1000,-800,-700)"
+											}
+										}
+									],
+									"sid": 837350466956972,
+									"disabled": true
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "Enemy",
+									"sid": 667021367200377,
+									"parameters": {
+										"comparison": 4,
+										"x-co-ordinate": "PlayerBase.X"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Enemy",
+									"sid": 470955826517785,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 497302113415014,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 875272845114105
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Enemy",
+									"sid": 171888017439642,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 249782695428021,
+							"disabled": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 414206395839254
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Enemy",
+					"sid": 746678831700939,
+					"parameters": {
+						"instance-variable": "Ativo",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 118503813616631
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Petala",
+					"sid": 389136396914629
+				}
+			],
+			"actions": [
+				{
+					"id": "set-vector-y",
+					"objectClass": "Petala",
+					"sid": 556444165150258,
+					"behaviorType": "Platform",
+					"parameters": {
+						"vector-y": "random(-400,-300,-200)"
+					}
+				}
+			],
+			"sid": 343944849170611
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "Petala",
+					"sid": 242915002712826
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Petala",
+					"sid": 884320869487625,
+					"parameters": {
+						"object": "explosion",
+						"layer": "Petala.LayerName",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 298210934902497
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Petala",
+					"sid": 831578053765576,
+					"parameters": {
+						"object": "Tilemap_ok"
+					}
+				},
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Petala",
+					"sid": 964406315658653,
+					"parameters": {
+						"object": "PlayerBase"
+					}
+				},
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Petala",
+					"sid": 806339129495514,
+					"parameters": {
+						"object": "PersonagemHitbox"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Petala",
+					"sid": 742005381537356
+				}
+			],
+			"sid": 158181034142696,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-animation-finished",
+					"objectClass": "explosion",
+					"sid": 921611032641070
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "explosion",
+					"sid": 466161095195107
+				}
+			],
+			"sid": 894665926611160
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-function",
+					"objectClass": "Function",
+					"sid": 472714097085712,
+					"parameters": {
+						"name": "\"inimigoatira\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 922657533381722,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "Enemy",
+							"sid": 504327910687036,
+							"parameters": {
+								"unique-id": "Function.Param(0)"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 244198230084694,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-mirrored",
+									"objectClass": "Enemy",
+									"sid": 801875811546117
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 295247729148216
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Enemy",
+									"sid": 197634507064942,
+									"parameters": {
+										"object": "Petala",
+										"layer": "Enemy.LayerName",
+										"image-point": "1",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-vector-x",
+									"objectClass": "Petala",
+									"sid": 380734221897241,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-x": "random(1000,800,-700)"
+									}
+								}
+							],
+							"sid": 535291612832697
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 117748268160005
+								},
+								{
+									"id": "is-mirrored",
+									"objectClass": "Enemy",
+									"sid": 380516569777356,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Enemy",
+									"sid": 793769638518041,
+									"parameters": {
+										"object": "Petala",
+										"layer": "Enemy.LayerName",
+										"image-point": "1",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-vector-x",
+									"objectClass": "Petala",
+									"sid": 334011860134877,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-x": "random(-1000,-800,-700)"
+									}
+								}
+							],
+							"sid": 791994725285647
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "GARUDA"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Garuda",
+					"sid": 165130372059293,
+					"parameters": {
+						"instance-variable": "estado",
+						"comparison": 1,
+						"value": "\"Die\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 911335355421072,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Garuda",
+							"sid": 569105814429768,
+							"parameters": {
+								"instance-variable": "Patrulha"
+							}
+						},
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 453297095294371,
+							"parameters": {
+								"object": "Garuda",
+								"expression": "distance(Garuda.X,Garuda.Y,PlayerBase.X,PlayerBase.Y)",
+								"comparison": 3,
+								"value": "600"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Garuda",
+							"sid": 334981538606251,
+							"parameters": {
+								"instance-variable": "Ativo"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 495002229818479,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 162695032602510,
+									"parameters": {
+										"object": "Garuda"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 945931806293038,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 814402425265592,
+											"parameters": {
+												"object": "DetectorPiterodatilo",
+												"expression": "DetectorPiterodatilo.inimigoID",
+												"comparison": 0,
+												"value": "Garuda.UID"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 415183758658175,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-mirrored",
+													"objectClass": "Garuda",
+													"sid": 869299255071202
+												},
+												{
+													"id": "is-overlapping-at-offset",
+													"objectClass": "DetectorPiterodatilo",
+													"sid": 820812292941521,
+													"parameters": {
+														"object": "Tilemap_ok",
+														"offset-x": "-3",
+														"offset-y": "0"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Garuda",
+													"sid": 105179806812797,
+													"parameters": {
+														"instance-variable": "estado",
+														"value": "\"Left\""
+													}
+												},
+												{
+													"id": "simulate-control",
+													"objectClass": "Garuda",
+													"sid": 678787588084878,
+													"behaviorType": "Platform2",
+													"parameters": {
+														"control": "left"
+													}
+												},
+												{
+													"id": "set-mirrored",
+													"objectClass": "Garuda",
+													"sid": 133673524386802,
+													"parameters": {
+														"state": "not-mirrored"
+													}
+												}
+											],
+											"sid": 228720842994286
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 120066827492791
+												},
+												{
+													"id": "is-mirrored",
+													"objectClass": "Garuda",
+													"sid": 952437809654685,
+													"isInverted": true
+												},
+												{
+													"id": "is-overlapping-at-offset",
+													"objectClass": "DetectorPiterodatilo",
+													"sid": 687405337600719,
+													"parameters": {
+														"object": "Tilemap_ok",
+														"offset-x": "3",
+														"offset-y": "0"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Garuda",
+													"sid": 549020821543428,
+													"parameters": {
+														"instance-variable": "estado",
+														"value": "\"Right\""
+													}
+												},
+												{
+													"id": "simulate-control",
+													"objectClass": "Garuda",
+													"sid": 954870827004288,
+													"behaviorType": "Platform2",
+													"parameters": {
+														"control": "right"
+													}
+												},
+												{
+													"id": "set-mirrored",
+													"objectClass": "Garuda",
+													"sid": 168749466702450,
+													"parameters": {
+														"state": "mirrored"
+													}
+												}
+											],
+											"sid": 478459579605333
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 572027141554528
+												},
+												{
+													"id": "is-overlapping-another-object",
+													"objectClass": "DetectorPiterodatilo",
+													"sid": 462173946955589,
+													"parameters": {
+														"object": "Tilemap_ok"
+													}
+												},
+												{
+													"id": "is-mirrored",
+													"objectClass": "Garuda",
+													"sid": 864118119083406,
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "simulate-control",
+													"objectClass": "Garuda",
+													"sid": 954599330004045,
+													"behaviorType": "Platform2",
+													"parameters": {
+														"control": "right"
+													}
+												}
+											],
+											"sid": 806212321740189
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 727746042828805
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Garuda",
+													"sid": 559063662532857,
+													"parameters": {
+														"instance-variable": "estado",
+														"comparison": 0,
+														"value": "\"Right\""
+													}
+												},
+												{
+													"id": "is-overlapping-another-object",
+													"objectClass": "DetectorPiterodatilo",
+													"sid": 622151954573826,
+													"parameters": {
+														"object": "Tilemap_ok"
+													}
+												},
+												{
+													"id": "is-mirrored",
+													"objectClass": "Garuda",
+													"sid": 776889820552544
+												}
+											],
+											"actions": [
+												{
+													"id": "simulate-control",
+													"objectClass": "Garuda",
+													"sid": 998476281893597,
+													"behaviorType": "Platform2",
+													"parameters": {
+														"control": "left"
+													}
+												}
+											],
+											"sid": 707709898475977
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "Garuda",
+							"sid": 266271642921553,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "PlayerBase",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Garuda",
+							"sid": 200579705214156,
+							"parameters": {
+								"instance-variable": "Patrulha",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "Personagem",
+							"sid": 466720873615521,
+							"disabled": true,
+							"parameters": {
+								"opacity": "10"
+							}
+						}
+					],
+					"sid": 693684257658502
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 283082806148647
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "Personagem",
+							"sid": 853789447522626,
+							"disabled": true,
+							"parameters": {
+								"opacity": "100"
+							}
+						}
+					],
+					"sid": 140366885654227
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Garuda",
+							"sid": 566249896479032,
+							"parameters": {
+								"instance-variable": "Patrulha"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 226974481186431,
+							"parameters": {
+								"object": "Garuda",
+								"expression": "distance(Garuda.X,Garuda.Y,PlayerBase.X,PlayerBase.Y)",
+								"comparison": 4,
+								"value": "50"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Garuda",
+							"sid": 121681433652733,
+							"parameters": {
+								"instance-variable": "Ativo"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 339910091791902,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 416240847802852,
+									"parameters": {
+										"object": "Garuda"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 187972106053972,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 188024028458402,
+											"parameters": {
+												"object": "DetectorPiterodatilo",
+												"expression": "DetectorPiterodatilo.inimigoID",
+												"comparison": 0,
+												"value": "Garuda.UID"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 241554121920209,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Garuda",
+													"sid": 358426502156854,
+													"parameters": {
+														"instance-variable": "estado",
+														"value": "\"Alerta\""
+													}
+												},
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Garuda",
+													"sid": 559375448383609,
+													"parameters": {
+														"instance-variable": "Alerta",
+														"value": "true"
+													}
+												},
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Garuda",
+													"sid": 601181093862869,
+													"parameters": {
+														"instance-variable": "Run",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 477434070476883
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Garuda",
+							"sid": 686779029570475,
+							"parameters": {
+								"instance-variable": "Alerta"
+							}
+						},
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 157549843317379,
+							"parameters": {
+								"object": "Garuda",
+								"expression": "distance(Garuda.X,Garuda.Y,PlayerBase.X,PlayerBase.Y)",
+								"comparison": 2,
+								"value": "70"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Garuda",
+							"sid": 881699468705170,
+							"parameters": {
+								"instance-variable": "Ativo"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 911830309350912,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 514531300972466,
+									"parameters": {
+										"object": "Garuda"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Garuda",
+									"sid": 412931134266700,
+									"parameters": {
+										"instance-variable": "Run",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Garuda",
+									"sid": 599972494747547,
+									"parameters": {
+										"instance-variable": "Alerta",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 865115274477747
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Garuda",
+							"sid": 843427042933361,
+							"parameters": {
+								"instance-variable": "Hurt"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 390305075357947,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Garuda",
+									"sid": 679061189320519,
+									"parameters": {
+										"instance-variable": "Run"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 384454224208650,
+									"parameters": {
+										"object": "Garuda",
+										"expression": "distance(Garuda.X,Garuda.Y,PlayerBase.X,PlayerBase.Y)",
+										"comparison": 3,
+										"value": "100"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Garuda",
+									"sid": 615764023038239,
+									"parameters": {
+										"instance-variable": "Alerta"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Garuda",
+									"sid": 536124318598722,
+									"parameters": {
+										"instance-variable": "Ativo"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 186234622760723,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 338176609456558,
+											"parameters": {
+												"object": "Garuda"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 687529401039306,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Garuda",
+													"sid": 832536313295080,
+													"parameters": {
+														"instance-variable": "recuo"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [],
+											"sid": 200049550536907,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Garuda",
+															"sid": 666693623921094,
+															"parameters": {
+																"instance-variable": "inimigoId",
+																"comparison": 3,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 553027273366344,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-x",
+																	"objectClass": "Garuda",
+																	"sid": 869367554136025,
+																	"parameters": {
+																		"comparison": 4,
+																		"x-co-ordinate": "PlayerBase.X"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "simulate-control",
+																	"objectClass": "Garuda",
+																	"sid": 533849759662083,
+																	"behaviorType": "Platform2",
+																	"parameters": {
+																		"control": "left"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "Garuda",
+																	"sid": 941828087692808,
+																	"parameters": {
+																		"instance-variable": "estado",
+																		"value": "\"Right\""
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 753341448575447,
+																	"parameters": {
+																		"seconds": "0.3"
+																	}
+																},
+																{
+																	"id": "set-mirrored",
+																	"objectClass": "Garuda",
+																	"sid": 465899660949209,
+																	"parameters": {
+																		"state": "mirrored"
+																	}
+																}
+															],
+															"sid": 190321471881522
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 314635524540282
+																}
+															],
+															"actions": [
+																{
+																	"id": "simulate-control",
+																	"objectClass": "Garuda",
+																	"sid": 278796560974946,
+																	"behaviorType": "Platform2",
+																	"parameters": {
+																		"control": "right"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "Garuda",
+																	"sid": 950246958337724,
+																	"parameters": {
+																		"instance-variable": "estado",
+																		"value": "\"Right\""
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 180757473502679,
+																	"parameters": {
+																		"seconds": "0.3"
+																	}
+																},
+																{
+																	"id": "set-mirrored",
+																	"objectClass": "Garuda",
+																	"sid": 354499758614296,
+																	"parameters": {
+																		"state": "not-mirrored"
+																	}
+																}
+															],
+															"sid": 241112280902368
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Garuda",
+															"sid": 842827269961731,
+															"parameters": {
+																"instance-variable": "estado",
+																"comparison": 1,
+																"value": "\"Atk\""
+															}
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Garuda",
+															"sid": 802658564382750,
+															"parameters": {
+																"instance-variable": "inimigoId",
+																"comparison": 5,
+																"value": "3"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 163481308821639,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-x",
+																	"objectClass": "Garuda",
+																	"sid": 239466099924956,
+																	"parameters": {
+																		"comparison": 4,
+																		"x-co-ordinate": "PlayerBase.X"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "simulate-control",
+																	"objectClass": "Garuda",
+																	"sid": 508743343264900,
+																	"behaviorType": "Platform2",
+																	"parameters": {
+																		"control": "left"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "Garuda",
+																	"sid": 658408009533524,
+																	"parameters": {
+																		"instance-variable": "estado",
+																		"value": "\"Right\""
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 555584685622842,
+																	"parameters": {
+																		"seconds": "0.3"
+																	}
+																},
+																{
+																	"id": "set-mirrored",
+																	"objectClass": "Garuda",
+																	"sid": 618982277262906,
+																	"parameters": {
+																		"state": "mirrored"
+																	}
+																}
+															],
+															"sid": 684010225978867
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 782454828018454
+																}
+															],
+															"actions": [
+																{
+																	"id": "simulate-control",
+																	"objectClass": "Garuda",
+																	"sid": 589821330466584,
+																	"behaviorType": "Platform2",
+																	"parameters": {
+																		"control": "right"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "Garuda",
+																	"sid": 397768553210539,
+																	"parameters": {
+																		"instance-variable": "estado",
+																		"value": "\"Right\""
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 962851953104180,
+																	"parameters": {
+																		"seconds": "0.3"
+																	}
+																},
+																{
+																	"id": "set-mirrored",
+																	"objectClass": "Garuda",
+																	"sid": 326788060692866,
+																	"parameters": {
+																		"state": "not-mirrored"
+																	}
+																}
+															],
+															"sid": 789255811490514
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-any-animation-finished",
+											"objectClass": "Garuda",
+											"sid": 533307811705627
+										}
+									],
+									"actions": [
+										{
+											"id": "call-function",
+											"objectClass": "Function",
+											"sid": 611784546976728,
+											"parameters": {
+												"name": "\"EnemyRecua\"",
+												"parameter-n": [
+													"Garuda.UID"
+												]
+											}
+										}
+									],
+									"sid": 696793332776117
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Garuda",
+											"sid": 966628865965776,
+											"parameters": {
+												"instance-variable": "inimigoId",
+												"comparison": 3,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 374902221899050,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-comparison",
+													"objectClass": "System",
+													"sid": 262390144615430,
+													"parameters": {
+														"object": "Garuda",
+														"expression": "distance(Garuda.X,Garuda.Y,PlayerBase.X,PlayerBase.Y)",
+														"comparison": 3,
+														"value": "30"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Garuda",
+													"sid": 534525051005932,
+													"parameters": {
+														"instance-variable": "estado",
+														"value": "\"Atk\""
+													}
+												}
+											],
+											"sid": 725794373093087
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 982898084693150
+										}
+									],
+									"actions": [],
+									"sid": 691632902171791,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-comparison",
+													"objectClass": "System",
+													"sid": 880006386243524,
+													"parameters": {
+														"object": "Garuda",
+														"expression": "distance(Garuda.X,Garuda.Y,PlayerBase.X,PlayerBase.Y)",
+														"comparison": 3,
+														"value": "20"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Garuda",
+													"sid": 844529686723218,
+													"parameters": {
+														"instance-variable": "estado",
+														"value": "\"Atk\""
+													}
+												}
+											],
+											"sid": 593248166092745
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Garuda",
+							"sid": 983812621404027,
+							"parameters": {
+								"instance-variable": "Run"
+							}
+						},
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 560124465210927,
+							"parameters": {
+								"object": "Garuda",
+								"expression": "distance(Garuda.X,Garuda.Y,PlayerBase.X,PlayerBase.Y)",
+								"comparison": 5,
+								"value": "100"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Garuda",
+							"sid": 974747321094706,
+							"parameters": {
+								"instance-variable": "Alerta"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Garuda",
+							"sid": 464165547406527,
+							"parameters": {
+								"instance-variable": "Ativo"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 528407835843937,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 887196894918842,
+									"parameters": {
+										"object": "Garuda"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Garuda",
+									"sid": 764678892716428,
+									"parameters": {
+										"instance-variable": "Run",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Garuda",
+									"sid": 554652807261630,
+									"parameters": {
+										"instance-variable": "Patrulha",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 336663896185363
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Garuda",
+							"sid": 649905237382567,
+							"parameters": {
+								"object": "PlayerBase"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Garuda",
+							"sid": 225622211254761,
+							"parameters": {
+								"instance-variable": "estado",
+								"comparison": 0,
+								"value": "\"Atk\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Garuda",
+							"sid": 261655684822682,
+							"parameters": {
+								"instance-variable": "inimigoId",
+								"comparison": 3,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 762928618875071,
+							"parameters": {
+								"name": "\"EnemyRecua\"",
+								"parameter-n": [
+									"Garuda.UID"
+								]
+							}
+						}
+					],
+					"sid": 116820280740845
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Garuda",
+							"sid": 495697663764601,
+							"parameters": {
+								"instance-variable": "Hurt"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 726178813735254,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-function",
+									"objectClass": "Function",
+									"sid": 128428898563924,
+									"parameters": {
+										"name": "\"EnemyRecua\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 508986555092143,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "Garuda",
+											"sid": 380988289650663,
+											"parameters": {
+												"unique-id": "Function.Param(0)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Garuda",
+											"sid": 921252375657140,
+											"parameters": {
+												"instance-variable": "recuo",
+												"value": "true"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 746225118404229,
+											"parameters": {
+												"seconds": "0.5"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Garuda",
+											"sid": 552470727096962,
+											"parameters": {
+												"instance-variable": "recuo",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 808861935182038
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Garuda",
+									"sid": 799981186772447,
+									"parameters": {
+										"instance-variable": "recuo"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 175500774570531,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "Garuda",
+											"sid": 892704241544899,
+											"parameters": {
+												"comparison": 4,
+												"x-co-ordinate": "PlayerBase.X"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Garuda",
+											"sid": 967830512644897,
+											"parameters": {
+												"instance-variable": "estado",
+												"value": "\"Right\""
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "Garuda",
+											"sid": 981880786066242,
+											"behaviorType": "Platform2",
+											"parameters": {
+												"control": "right"
+											}
+										}
+									],
+									"sid": 404375540089080
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 944753430992443
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Garuda",
+											"sid": 964063604762833,
+											"parameters": {
+												"instance-variable": "estado",
+												"value": "\"Right\""
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "Garuda",
+											"sid": 533401503802084,
+											"behaviorType": "Platform2",
+											"parameters": {
+												"control": "left"
+											}
+										}
+									],
+									"sid": 735541129661077
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "Garuda",
+					"sid": 323845921462896
+				}
+			],
+			"actions": [
+				{
+					"id": "call-function",
+					"objectClass": "Function",
+					"sid": 893827538961658,
+					"parameters": {
+						"name": "\"DropItem\"",
+						"parameter-n": [
+							"Garuda.X",
+							"Garuda.Y"
+						]
+					}
+				}
+			],
+			"sid": 139141402370183
+		},
+		{
+			"eventType": "comment",
+			"text": "Gnolly"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Gnolly",
+					"sid": 478443781317617,
+					"parameters": {
+						"instance-variable": "estado",
+						"comparison": 1,
+						"value": "\"Die\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 755594596364391,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 676214260983003,
+							"parameters": {
+								"object": "Gnolly",
+								"expression": "distance(Gnolly.x,Gnolly.Y,PlayerBase.X,PlayerBase.Y)",
+								"comparison": 3,
+								"value": "120"
+							}
+						},
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 706822741488185,
+							"parameters": {
+								"object": "Gnolly",
+								"expression": "distance(Gnolly.x,Gnolly.Y,PlayerBase.X,PlayerBase.Y)",
+								"comparison": 5,
+								"value": "22"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Gnolly",
+							"sid": 822834813211967,
+							"parameters": {
+								"instance-variable": "Hurt"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 334427506698511,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Gnolly",
+									"sid": 438885979365770,
+									"parameters": {
+										"instance-variable": "estado",
+										"comparison": 1,
+										"value": "\"Atk\""
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Gnolly",
+									"sid": 172156139651571,
+									"parameters": {
+										"instance-variable": "estado",
+										"comparison": 1,
+										"value": "\"Atk2\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 794219293582542,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "Gnolly",
+											"sid": 460959778958415,
+											"parameters": {
+												"comparison": 4,
+												"x-co-ordinate": "PlayerBase.X"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-mirrored",
+											"objectClass": "Gnolly",
+											"sid": 358649601455389,
+											"parameters": {
+												"state": "mirrored"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Gnolly",
+											"sid": 354780945419240,
+											"parameters": {
+												"instance-variable": "estado",
+												"value": "\"Walk\""
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "Gnolly",
+											"sid": 696890105279871,
+											"behaviorType": "Platform2",
+											"parameters": {
+												"control": "left"
+											}
+										}
+									],
+									"sid": 130103390414843
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 268960002751226
+										}
+									],
+									"actions": [
+										{
+											"id": "set-mirrored",
+											"objectClass": "Gnolly",
+											"sid": 956021206320501,
+											"parameters": {
+												"state": "not-mirrored"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Gnolly",
+											"sid": 288441096678701,
+											"parameters": {
+												"instance-variable": "estado",
+												"value": "\"Walk\""
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "Gnolly",
+											"sid": 114019020633589,
+											"behaviorType": "Platform2",
+											"parameters": {
+												"control": "right"
+											}
+										}
+									],
+									"sid": 409494105046849
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "pick-by-comparison",
+					"objectClass": "System",
+					"sid": 907410533373133,
+					"parameters": {
+						"object": "Gnolly",
+						"expression": "distance(Gnolly.x,Gnolly.Y,PlayerBase.X,PlayerBase.Y)",
+						"comparison": 3,
+						"value": "22"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 870934792420106,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 599278969692863
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Gnolly",
+							"sid": 601412541775213,
+							"parameters": {
+								"instance-variable": "estado",
+								"value": "choose(\"Atk\", \"Atk2\")"
+							}
+						}
+					],
+					"sid": 761836061774062
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "Gnolly",
+					"sid": 946255727882263,
+					"parameters": {
+						"animation": "\"Atk_1\""
+					}
+				},
+				{
+					"id": "on-animation-finished",
+					"objectClass": "Gnolly",
+					"sid": 415673604243178,
+					"parameters": {
+						"animation": "\"Atk2_1\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Gnolly",
+					"sid": 693560660387541,
+					"parameters": {
+						"instance-variable": "estado",
+						"value": "\"Idle\""
+					}
+				}
+			],
+			"sid": 790777661593360,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "comment",
+			"text": "Jatayu"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Jatayu",
+					"sid": 681993705852198
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Jatayu",
+					"sid": 854580842481624,
+					"parameters": {
+						"instance-variable": "yInicial",
+						"value": "Jatayu.Y"
+					}
+				}
+			],
+			"sid": 960637354020702
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Jatayu",
+					"sid": 683812869030190,
+					"parameters": {
+						"instance-variable": "estado",
+						"comparison": 0,
+						"value": "\"Die\""
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Jatayu",
+					"sid": 979222317583301,
+					"parameters": {
+						"instance-variable": "Hurt"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Jatayu",
+					"sid": 665561981953357,
+					"parameters": {
+						"instance-variable": "CanBeDamage",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 854787211550405,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 472654234929720,
+							"parameters": {
+								"object": "Jatayu",
+								"expression": "distance(Jatayu.x,Jatayu.Y,PlayerBase.X,PlayerBase.Y)",
+								"comparison": 5,
+								"value": "80"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 202134669656925,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "Jatayu",
+									"sid": 233360435363397,
+									"parameters": {
+										"comparison": 4,
+										"y-co-ordinate": "Self.yInicial"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Jatayu",
+									"sid": 835682965221752,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "up"
+									}
+								}
+							],
+							"sid": 699962793730981
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Jatayu",
+									"sid": 805543275834416,
+									"parameters": {
+										"instance-variable": "contador",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Jatayu",
+									"sid": 410488096681802,
+									"parameters": {
+										"instance-variable": "contador",
+										"value": "dt"
+									}
+								}
+							],
+							"sid": 339876280202533,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Jatayu",
+											"sid": 532826226149885,
+											"parameters": {
+												"instance-variable": "direction",
+												"comparison": 0,
+												"value": "\"right\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-mirrored",
+											"objectClass": "Jatayu",
+											"sid": 933776676579103,
+											"parameters": {
+												"state": "mirrored"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "Jatayu",
+											"sid": 837596138557743,
+											"behaviorType": "8Direction",
+											"parameters": {
+												"control": "right"
+											}
+										}
+									],
+									"sid": 341001354834585,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Jatayu",
+													"sid": 810952320240322,
+													"parameters": {
+														"instance-variable": "inimigoId",
+														"comparison": 3,
+														"value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Jatayu",
+													"sid": 123441802759110,
+													"parameters": {
+														"instance-variable": "estado",
+														"value": "\"Idle\""
+													}
+												}
+											],
+											"sid": 716420008334104
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Jatayu",
+											"sid": 908828878646292,
+											"parameters": {
+												"instance-variable": "direction",
+												"comparison": 0,
+												"value": "\"left\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-mirrored",
+											"objectClass": "Jatayu",
+											"sid": 743803851455171,
+											"parameters": {
+												"state": "not-mirrored"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "Jatayu",
+											"sid": 256395988845568,
+											"behaviorType": "8Direction",
+											"parameters": {
+												"control": "left"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Jatayu",
+											"sid": 923124617359163,
+											"parameters": {
+												"instance-variable": "estado",
+												"value": "\"Idle\""
+											}
+										}
+									],
+									"sid": 690014712424770,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Jatayu",
+													"sid": 561515012920171,
+													"parameters": {
+														"instance-variable": "inimigoId",
+														"comparison": 3,
+														"value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Jatayu",
+													"sid": 539835376064228,
+													"parameters": {
+														"instance-variable": "estado",
+														"value": "\"Idle\""
+													}
+												}
+											],
+											"sid": 109321571428752
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Jatayu",
+									"sid": 657219666139741,
+									"parameters": {
+										"instance-variable": "contador",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 324904026685309,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 929267360886242
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Jatayu",
+											"sid": 528260835433456,
+											"parameters": {
+												"instance-variable": "contador",
+												"value": "4"
+											}
+										}
+									],
+									"sid": 356546733967062,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Jatayu",
+													"sid": 702487515237888,
+													"parameters": {
+														"instance-variable": "direction",
+														"comparison": 0,
+														"value": "\"left\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 446927200375739,
+													"parameters": {
+														"seconds": "0.2"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Jatayu",
+													"sid": 230609347431608,
+													"parameters": {
+														"instance-variable": "direction",
+														"value": "\"right\""
+													}
+												}
+											],
+											"sid": 570760335873163
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Jatayu",
+													"sid": 805548350736247,
+													"parameters": {
+														"instance-variable": "direction",
+														"comparison": 0,
+														"value": "\"right\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 482252599516460,
+													"parameters": {
+														"seconds": "0.2"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Jatayu",
+													"sid": 975034433189127,
+													"parameters": {
+														"instance-variable": "direction",
+														"value": "\"left\""
+													}
+												}
+											],
+											"sid": 417439304169812
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 406426872005316
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Jatayu",
+							"sid": 917005893553175,
+							"parameters": {
+								"instance-variable": "Recoil"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Jatayu",
+							"sid": 143465932375567,
+							"parameters": {
+								"instance-variable": "CanBeDamage",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 156969254705086,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "Jatayu",
+									"sid": 883928195748637,
+									"parameters": {
+										"comparison": 2,
+										"y-co-ordinate": "PlayerBase.Y - 10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Jatayu",
+									"sid": 811327060560337,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "down"
+									}
+								}
+							],
+							"sid": 169414323580861,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Jatayu",
+											"sid": 631074370251835,
+											"parameters": {
+												"instance-variable": "inimigoId",
+												"comparison": 5,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Jatayu",
+											"sid": 864052309239379,
+											"parameters": {
+												"instance-variable": "estado",
+												"value": "\"FlyingAttack\""
+											}
+										}
+									],
+									"sid": 135424979590689
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "Jatayu",
+									"sid": 878509304807180,
+									"parameters": {
+										"comparison": 4,
+										"x-co-ordinate": "PlayerBase.X"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 652212134261960,
+									"disabled": true,
+									"parameters": {
+										"seconds": "0.3"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Jatayu",
+									"sid": 153106128169111,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Jatayu",
+									"sid": 278660103540406,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 503677980426838
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 191386387560461
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 711938401746163,
+									"disabled": true,
+									"parameters": {
+										"seconds": "0.3"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Jatayu",
+									"sid": 895866783599654,
+									"parameters": {
+										"state": "mirrored"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Jatayu",
+									"sid": 914184199288317,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 203293883224491
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Jatayu",
+					"sid": 100182341724969,
+					"parameters": {
+						"object": "PlayerBase"
+					}
+				},
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Jatayu",
+					"sid": 774316618544196,
+					"parameters": {
+						"object": "PersonagemHitbox"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Jatayu",
+					"sid": 403315729143471,
+					"parameters": {
+						"instance-variable": "Recoil",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 271924346588935,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Jatayu",
+					"sid": 882840141741440,
+					"parameters": {
+						"instance-variable": "Recoil"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Jatayu",
+					"sid": 785557177629552,
+					"parameters": {
+						"instance-variable": "estado",
+						"comparison": 0,
+						"value": "\"Die\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 489942744780593,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "Jatayu",
+							"sid": 339266040364031,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": "Self.yInicial"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Jatayu",
+							"sid": 818528866731166,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						},
+						{
+							"id": "set-max-speed",
+							"objectClass": "Jatayu",
+							"sid": 961721547403149,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"max-speed": "60"
+							}
+						}
+					],
+					"sid": 263141488752396
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 340299070394364
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Jatayu",
+							"sid": 868576027030303,
+							"parameters": {
+								"instance-variable": "Recoil",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-max-speed",
+							"objectClass": "Jatayu",
+							"sid": 917769593056127,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"max-speed": "80"
+							}
+						}
+					],
+					"sid": 479915751440914
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Jatayu",
+							"sid": 259581319540200,
+							"parameters": {
+								"instance-variable": "inimigoId",
+								"comparison": 5,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Jatayu",
+							"sid": 786185571155706,
+							"parameters": {
+								"instance-variable": "estado",
+								"value": "\"Idle\""
+							}
+						}
+					],
+					"sid": 623265430809161
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Jatayu",
+					"sid": 691938705750457,
+					"parameters": {
+						"instance-variable": "estado",
+						"comparison": 0,
+						"value": "\"Die\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Jatayu",
+					"sid": 163906968574212,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Jatayu",
+					"sid": 136377994727582,
+					"behaviorType": "Platform2",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 919709374226445
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Personagem",
+					"sid": 156412813051746,
+					"parameters": {
+						"instance-variable": "Die"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 718525017792485,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 194057833780045
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Jatayu",
+							"sid": 956284263929745,
+							"parameters": {
+								"instance-variable": "Recoil",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 472632355153116
+				}
+			]
+		}
+	],
+	"sid": 593495510176861
+}

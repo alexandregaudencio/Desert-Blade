@@ -1,0 +1,48 @@
+{
+	"name": "plataformaMovel_v2",
+	"plugin-id": "Sprite",
+	"sid": 178255573592588,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 406496953707736
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 849270720514399
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 32,
+						"originX": 0,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 40,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 417891124097130,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

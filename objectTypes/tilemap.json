@@ -1,0 +1,32 @@
+{
+	"name": "Tilemap",
+	"plugin-id": "Tilemap",
+	"sid": 178039012573528,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 670864085781679
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 744971768061466
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 48,
+		"height": 144,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 9,
+		"useCollisionPoly": true
+	},
+	"tile-collision-polys": {}
+}

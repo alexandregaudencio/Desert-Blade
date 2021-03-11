@@ -1,0 +1,48 @@
+{
+	"name": "IconesSkills",
+	"plugin-id": "Sprite",
+	"sid": 605911773132543,
+	"instanceVariables": [
+		{
+			"name": "estado",
+			"type": "string",
+			"desc": "",
+			"sid": 747581562704845
+		},
+		{
+			"name": "nomeIcone",
+			"type": "string",
+			"desc": "",
+			"sid": 560243058598087
+		},
+		{
+			"name": "Block",
+			"type": "boolean",
+			"desc": "",
+			"sid": 650622049541539
+		},
+		{
+			"name": "SkillDescription",
+			"type": "string",
+			"desc": "",
+			"sid": 309772817164478
+		},
+		{
+			"name": "numeroSkill",
+			"type": "number",
+			"desc": "",
+			"sid": 649168716693604
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"LionIcon",
+		"MagicalBladeIcon",
+		"ShockWaveIcon",
+		"SpiritOfDecayIcon",
+		"SpinIcon",
+		"GroundmagicIcon",
+		"FortitudeIcon"
+	]
+}

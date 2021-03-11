@@ -1,0 +1,4775 @@
+{
+	"name": "eItens",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "DivisaoDaBarraHP",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 356962854674464
+		},
+		{
+			"eventType": "variable",
+			"name": "DivisaoDaBarraMP",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 437715704249652
+		},
+		{
+			"eventType": "variable",
+			"name": "ArmsIsOnScreen",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 400055286407657
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PlayerBase",
+					"sid": 427704153918676,
+					"parameters": {
+						"object": "Consumiveis"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Consumiveis",
+					"sid": 592935250631161
+				}
+			],
+			"sid": 997262517669265
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Item",
+					"sid": 280708757463840,
+					"parameters": {
+						"animation": "\"Ring\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Item",
+					"sid": 573283343439475,
+					"parameters": {
+						"instance-variable": "ItemKey",
+						"value": "\"Ring Metal\""
+					}
+				}
+			],
+			"sid": 191472905034021
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Item",
+					"sid": 356657683357337,
+					"parameters": {
+						"animation": "\"Ring Metal\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Item",
+					"sid": 271506046771838,
+					"parameters": {
+						"instance-variable": "ItemKey",
+						"value": "\"Ring\""
+					}
+				}
+			],
+			"sid": 637368248266275
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PlayerBase",
+					"sid": 686398921398149,
+					"parameters": {
+						"object": "Item"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 805830709581367,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Item",
+							"sid": 301964307907369,
+							"parameters": {
+								"instance-variable": "ItemKey",
+								"comparison": 0,
+								"value": "\"Ring Metal\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-key",
+							"objectClass": "Dictionary",
+							"sid": 915685004973811,
+							"parameters": {
+								"key": "\"FOR\"",
+								"value": "Personagem.ForPadrão + 10"
+							}
+						}
+					],
+					"sid": 811785790395079
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Item",
+							"sid": 856821149657023,
+							"parameters": {
+								"instance-variable": "ItemKey",
+								"comparison": 0,
+								"value": "\"Ring\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-key",
+							"objectClass": "Dictionary",
+							"sid": 503744134428814,
+							"parameters": {
+								"key": "\"HPMAX\"",
+								"value": "Personagem.HPMAxPadrao + 10"
+							}
+						}
+					],
+					"sid": 105008619717623
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PlayerBase",
+					"sid": 742968776229402,
+					"parameters": {
+						"object": "Consumiveis"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 286687136291610,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Consumiveis",
+					"sid": 537040876980242
+				}
+			],
+			"sid": 565537253473564,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Consumiveis",
+							"sid": 233520690239783,
+							"parameters": {
+								"animation": "\"Apple\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 659080901267352,
+							"parameters": {
+								"name": "\"AjusteDeVida\"",
+								"parameter-n": [
+									"30"
+								]
+							}
+						}
+					],
+					"sid": 968501290876222
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Consumiveis",
+							"sid": 748834960520315,
+							"parameters": {
+								"animation": "\"Melon\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 355822663466372,
+							"parameters": {
+								"name": "\"AjusteDeVida\"",
+								"parameter-n": [
+									"50"
+								]
+							}
+						},
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 775139805008046,
+							"parameters": {
+								"name": "\"AjusteDeMana\"",
+								"parameter-n": [
+									"30"
+								]
+							}
+						}
+					],
+					"sid": 524532480871115
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Consumiveis",
+							"sid": 494677409641876,
+							"parameters": {
+								"animation": "\"Orange\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 120471367840869,
+							"parameters": {
+								"name": "\"AjusteDeMana\"",
+								"parameter-n": [
+									"30"
+								]
+							}
+						}
+					],
+					"sid": 863779922612440
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Consumiveis",
+							"sid": 212372760387413,
+							"parameters": {
+								"animation": "\"PineappleJuice\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 252896987897803,
+							"parameters": {
+								"name": "\"AjusteDeMana\"",
+								"parameter-n": [
+									"50"
+								]
+							}
+						}
+					],
+					"sid": 164956298178516
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Consumiveis",
+							"sid": 108597015155256,
+							"parameters": {
+								"animation": "\"LemonJuice\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 813648246659732,
+							"parameters": {
+								"name": "\"AjusteDeVida\"",
+								"parameter-n": [
+									"50"
+								]
+							}
+						}
+					],
+					"sid": 812882959866256
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Consumiveis",
+							"sid": 847567923510796,
+							"parameters": {
+								"animation": "\"WaterBottle\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 972823977652290,
+							"parameters": {
+								"name": "\"AjusteDeVida\"",
+								"parameter-n": [
+									"30"
+								]
+							}
+						},
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 275886876006483,
+							"parameters": {
+								"name": "\"AjusteDeMana\"",
+								"parameter-n": [
+									"30"
+								]
+							}
+						}
+					],
+					"sid": 386354431926649
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Barras",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 842617313236870,
+							"parameters": {
+								"variable": "DivisaoDaBarraHP",
+								"value": "Dictionary.Get(\"HPMAX\")  / 10 "
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 852608763865080,
+							"parameters": {
+								"variable": "DivisaoDaBarraMP",
+								"value": "Dictionary.Get(\"MPMAX\")  / 10 "
+							}
+						}
+					],
+					"sid": 239738521542266
+				},
+				{
+					"eventType": "comment",
+					"text": "Barra de Vida"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 386248650533684,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"HP\")",
+								"comparison": 5,
+								"second-value": "Dictionary.Get(\"HPMAX\")"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "HPBarra",
+							"sid": 140633543585179,
+							"parameters": {
+								"frame-number": "10"
+							}
+						}
+					],
+					"sid": 690525975096862
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 315274490563314,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"HP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraHP * 9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "HPBarra",
+							"sid": 629455478152402,
+							"parameters": {
+								"frame-number": "9"
+							}
+						}
+					],
+					"sid": 655294817138700
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 863509048909668,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"HP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraHP * 8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "HPBarra",
+							"sid": 598443073661116,
+							"parameters": {
+								"frame-number": "8"
+							}
+						}
+					],
+					"sid": 724141256833203
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 452716154400359,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"HP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraHP * 7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "HPBarra",
+							"sid": 325736062685613,
+							"parameters": {
+								"frame-number": "7"
+							}
+						}
+					],
+					"sid": 154965237730462
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 590247278052500,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"HP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraHP * 6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "HPBarra",
+							"sid": 467212321098442,
+							"parameters": {
+								"frame-number": "6"
+							}
+						}
+					],
+					"sid": 814267655917391
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 483777773425320,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"HP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraHP * 5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "HPBarra",
+							"sid": 206070014852811,
+							"parameters": {
+								"frame-number": "5"
+							}
+						}
+					],
+					"sid": 396160539735135
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 305493844036454,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"HP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraHP * 4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "HPBarra",
+							"sid": 461393224518800,
+							"parameters": {
+								"frame-number": "4"
+							}
+						}
+					],
+					"sid": 261186697645462
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 154368679187643,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"HP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraHP * 3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "HPBarra",
+							"sid": 714930536364693,
+							"parameters": {
+								"frame-number": "3"
+							}
+						}
+					],
+					"sid": 159432087641257
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 303140497870369,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"HP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraHP * 2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "HPBarra",
+							"sid": 672550584094478,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 876646798008447
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 514438673692175,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"HP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraHP * 1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "HPBarra",
+							"sid": 873976803864152,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 626875576836956
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 558928227938596,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"HP\")",
+								"comparison": 3,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "HPBarra",
+							"sid": 586098782319725,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 558635843730959
+				},
+				{
+					"eventType": "comment",
+					"text": "Barra de Mana"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 764297778431517,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"MP\")",
+								"comparison": 5,
+								"second-value": "Dictionary.Get(\"MPMAX\")"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MPBarra",
+							"sid": 250490623629536,
+							"parameters": {
+								"frame-number": "10"
+							}
+						}
+					],
+					"sid": 106306322709984
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 334265665236854,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"MP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraMP * 9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MPBarra",
+							"sid": 265758933128252,
+							"parameters": {
+								"frame-number": "9"
+							}
+						}
+					],
+					"sid": 124438808344516
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 849255457396251,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"MP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraMP * 8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MPBarra",
+							"sid": 140620846308048,
+							"parameters": {
+								"frame-number": "8"
+							}
+						}
+					],
+					"sid": 425409827544951
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 352548527666553,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"MP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraMP * 7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MPBarra",
+							"sid": 119956493982870,
+							"parameters": {
+								"frame-number": "7"
+							}
+						}
+					],
+					"sid": 499937452808350
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 432796112556097,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"MP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraMP * 6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MPBarra",
+							"sid": 932400856522633,
+							"parameters": {
+								"frame-number": "6"
+							}
+						}
+					],
+					"sid": 519752100466300
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 122176380053275,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"MP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraMP * 5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MPBarra",
+							"sid": 981321006005881,
+							"parameters": {
+								"frame-number": "5"
+							}
+						}
+					],
+					"sid": 522114423049892
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 522573739656181,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"MP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraMP * 4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MPBarra",
+							"sid": 192915433907754,
+							"parameters": {
+								"frame-number": "4"
+							}
+						}
+					],
+					"sid": 463686652214198
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 326146865330200,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"MP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraMP * 3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MPBarra",
+							"sid": 114450369440512,
+							"parameters": {
+								"frame-number": "3"
+							}
+						}
+					],
+					"sid": 333788498698662
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 394736403913620,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"MP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraMP * 2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MPBarra",
+							"sid": 780916827541293,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 879050097841757
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 857136299537381,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"MP\")",
+								"comparison": 3,
+								"second-value": "DivisaoDaBarraMP * 1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MPBarra",
+							"sid": 427598002211479,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 947462472517164
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 791764798751877,
+							"parameters": {
+								"first-value": "Dictionary.Get(\"MP\")",
+								"comparison": 3,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MPBarra",
+							"sid": 968217835589253,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 552129688825467
+				}
+			],
+			"sid": 678660935764112
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Menu Skills",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 293908450273914,
+							"parameters": {
+								"variable": "SkillPointsScreen"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 909189711690462,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Runners",
+									"sid": 947081786028439,
+									"parameters": {
+										"instance-variable": "horizontal",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 504712181767470,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Runners",
+											"sid": 958044933006323,
+											"parameters": {
+												"instance-variable": "vertical",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Runners",
+											"sid": 990784942615626,
+											"parameters": {
+												"x": "88.969",
+												"y": " 59.933"
+											}
+										}
+									],
+									"sid": 860526333127379
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Runners",
+											"sid": 864383960166770,
+											"parameters": {
+												"instance-variable": "vertical",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Runners",
+											"sid": 961640809511660,
+											"parameters": {
+												"x": "89.969",
+												"y": " 81.933"
+											}
+										}
+									],
+									"sid": 519000142585345
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Runners",
+									"sid": 839251194412618,
+									"parameters": {
+										"instance-variable": "horizontal",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 752482583785107,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Runners",
+											"sid": 367709503118518,
+											"parameters": {
+												"instance-variable": "vertical",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Runners",
+											"sid": 542214251811628,
+											"parameters": {
+												"x": "110.356",
+												"y": " 94.919"
+											}
+										}
+									],
+									"sid": 328415296970701
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Runners",
+											"sid": 400537051402359,
+											"parameters": {
+												"instance-variable": "vertical",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Runners",
+											"sid": 239035148602660,
+											"parameters": {
+												"x": "109.969",
+												"y": "44.933"
+											}
+										}
+									],
+									"sid": 506505614325101
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Runners",
+											"sid": 738529010401293,
+											"parameters": {
+												"instance-variable": "vertical",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Runners",
+											"sid": 993743405578319,
+											"parameters": {
+												"x": "109.969",
+												"y": " 71.933"
+											}
+										}
+									],
+									"sid": 545636271247699
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Runners",
+									"sid": 948445728670876,
+									"parameters": {
+										"instance-variable": "horizontal",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 855894076620578,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Runners",
+											"sid": 996701376699234,
+											"parameters": {
+												"instance-variable": "vertical",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Runners",
+											"sid": 308247131755099,
+											"parameters": {
+												"x": "130.969",
+												"y": " 59.933"
+											}
+										}
+									],
+									"sid": 772753841533936
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Runners",
+											"sid": 683305855827111,
+											"parameters": {
+												"instance-variable": "vertical",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Runners",
+											"sid": 384455355829886,
+											"parameters": {
+												"x": "129.969",
+												"y": " 81.933"
+											}
+										}
+									],
+									"sid": 255783354309999
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 287144608632317,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [],
+							"sid": 855040163785727,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Runners",
+											"sid": 243649558345593,
+											"parameters": {
+												"instance-variable": "horizontal",
+												"comparison": 0,
+												"value": "1"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Runners",
+											"sid": 413743219009062,
+											"parameters": {
+												"instance-variable": "vertical",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Runners",
+											"sid": 602985387813131,
+											"parameters": {
+												"instance-variable": "vertical",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Runners",
+											"sid": 587784237156518,
+											"parameters": {
+												"instance-variable": "horizontal",
+												"value": "2"
+											}
+										}
+									],
+									"sid": 716888039038255
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 950333194019196
+										}
+									],
+									"actions": [],
+									"sid": 965353718284706,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Runners",
+													"sid": 810565661670300,
+													"parameters": {
+														"instance-variable": "horizontal",
+														"comparison": 2,
+														"value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-to-instvar",
+													"objectClass": "Runners",
+													"sid": 997862340182588,
+													"parameters": {
+														"instance-variable": "horizontal",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 150474418400416
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 383198965075446
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Runners",
+													"sid": 428320170041034,
+													"parameters": {
+														"instance-variable": "horizontal",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 419892493966610
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 302007383975701,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [],
+							"sid": 829113938676724,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Runners",
+											"sid": 946619108304093,
+											"parameters": {
+												"instance-variable": "horizontal",
+												"comparison": 0,
+												"value": "1"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Runners",
+											"sid": 747228089744113,
+											"parameters": {
+												"instance-variable": "vertical",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Runners",
+											"sid": 324767442201870,
+											"parameters": {
+												"instance-variable": "vertical",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Runners",
+											"sid": 929889915078473,
+											"parameters": {
+												"instance-variable": "horizontal",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 110586292319266
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 782450932706311
+										}
+									],
+									"actions": [],
+									"sid": 328447727532839,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Runners",
+													"sid": 894083326289779,
+													"parameters": {
+														"instance-variable": "horizontal",
+														"comparison": 4,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "subtract-from-instvar",
+													"objectClass": "Runners",
+													"sid": 372949051127123,
+													"parameters": {
+														"instance-variable": "horizontal",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 819156574165873
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 329199310150586
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Runners",
+													"sid": 329833479870049,
+													"parameters": {
+														"instance-variable": "horizontal",
+														"value": "2"
+													}
+												}
+											],
+											"sid": 280523920877352
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 775006566251835,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [],
+							"sid": 508493655080973,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Runners",
+											"sid": 932789443819995,
+											"parameters": {
+												"instance-variable": "horizontal",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 588114996479876,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Runners",
+													"sid": 831377267129527,
+													"parameters": {
+														"instance-variable": "vertical",
+														"comparison": 2,
+														"value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-to-instvar",
+													"objectClass": "Runners",
+													"sid": 591039214231694,
+													"parameters": {
+														"instance-variable": "vertical",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 866494151285408
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 701306571707596
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Runners",
+													"sid": 640540083474931,
+													"parameters": {
+														"instance-variable": "vertical",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 902240827657331
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 865652844582690
+										}
+									],
+									"actions": [],
+									"sid": 514564991028149,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Runners",
+													"sid": 662756162384440,
+													"parameters": {
+														"instance-variable": "vertical",
+														"comparison": 2,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-to-instvar",
+													"objectClass": "Runners",
+													"sid": 335117417606919,
+													"parameters": {
+														"instance-variable": "vertical",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 222918903539703
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 211588285522634
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Runners",
+													"sid": 667814662501188,
+													"parameters": {
+														"instance-variable": "vertical",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 851892134057432
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 936254393759395,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [],
+							"sid": 136828661559353,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Runners",
+											"sid": 227539775134251,
+											"parameters": {
+												"instance-variable": "horizontal",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 222869149430300,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Runners",
+													"sid": 811324526303085,
+													"parameters": {
+														"instance-variable": "vertical",
+														"comparison": 4,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "subtract-from-instvar",
+													"objectClass": "Runners",
+													"sid": 343110169878705,
+													"parameters": {
+														"instance-variable": "vertical",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 828746195609890
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 966049672163572
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Runners",
+													"sid": 669768329784587,
+													"parameters": {
+														"instance-variable": "vertical",
+														"value": "2"
+													}
+												}
+											],
+											"sid": 863694036325590
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 667385628902509
+										}
+									],
+									"actions": [],
+									"sid": 171838365454432,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Runners",
+													"sid": 690736667896936,
+													"parameters": {
+														"instance-variable": "vertical",
+														"comparison": 4,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "subtract-from-instvar",
+													"objectClass": "Runners",
+													"sid": 776695108852977,
+													"parameters": {
+														"instance-variable": "vertical",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 271857501919054
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 590937590512046
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Runners",
+													"sid": 724154497179171,
+													"parameters": {
+														"instance-variable": "vertical",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 163276394160886
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 144184283590051,
+							"parameters": {
+								"key": 78
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 472670907427424,
+							"parameters": {
+								"name": "\"SkillPointsScreen\"",
+								"parameter-n": []
+							}
+						}
+					],
+					"sid": 429565231506722
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-function",
+							"objectClass": "Function",
+							"sid": 772261025180745,
+							"parameters": {
+								"name": "\"ReloadedSkillNumber\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "atributosSprites",
+							"sid": 769027372957310,
+							"parameters": {
+								"text": "Dictionary.Get(\"HPMAX\") &newline& Dictionary.Get(\"MPMAX\") &newline& Dictionary.Get(\"FOR\") &newline& Dictionary.Get(\"DEF\")"
+							}
+						}
+					],
+					"sid": 802230651000050
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-function",
+							"objectClass": "Function",
+							"sid": 110661452831249,
+							"parameters": {
+								"name": "\"atributosSetSprite\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 432336494718379,
+							"parameters": {
+								"object-to-create": "atributosSprites",
+								"layer": "\"HUD\"",
+								"x": "47.006",
+								"y": "32.163",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "atributosSprites",
+							"sid": 269255963034218,
+							"parameters": {
+								"text": "Dictionary.Get(\"HPMAX\") &newline& Dictionary.Get(\"MPMAX\") &newline& Dictionary.Get(\"FOR\") &newline& Dictionary.Get(\"DEF\")"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 965446430669610,
+							"parameters": {
+								"object-to-create": "NameSkill",
+								"layer": "\"HUD\"",
+								"x": "155.519",
+								"y": "33.01",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 444443484443344,
+							"parameters": {
+								"object-to-create": "FontDescription",
+								"layer": "\"HUD\"",
+								"x": "154.89",
+								"y": "39.527",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 493389738172326
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-function",
+							"objectClass": "Function",
+							"sid": 352271127824273,
+							"parameters": {
+								"name": "\"atributosDestroy\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "atributosSprites",
+							"sid": 442579206182418
+						},
+						{
+							"id": "destroy",
+							"objectClass": "NameSkill",
+							"sid": 536246327875054
+						},
+						{
+							"id": "destroy",
+							"objectClass": "FontDescription",
+							"sid": 772296149372631
+						}
+					],
+					"sid": 963414919680891
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "cursorOverlappingBox",
+							"sid": 330199023371378,
+							"parameters": {
+								"x": "Runners.X",
+								"y": "Runners.Y"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "IconesSkills",
+							"sid": 963665332182468,
+							"parameters": {
+								"animation": "IconesSkills.estado",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 638025209572149
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-function",
+							"objectClass": "Function",
+							"sid": 964999877157903,
+							"parameters": {
+								"name": "\"SkillPointsScreen\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 871529259847086,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 675049839235191,
+									"parameters": {
+										"variable": "SkillPointsScreen"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "habilidadesFundo",
+									"sid": 352549545906760
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Skillpoints",
+									"sid": 111928876726519
+								},
+								{
+									"id": "destroy",
+									"objectClass": "FortitudeIcon",
+									"sid": 454712060877367
+								},
+								{
+									"id": "destroy",
+									"objectClass": "GroundmagicIcon",
+									"sid": 260786842417652
+								},
+								{
+									"id": "destroy",
+									"objectClass": "LionIcon",
+									"sid": 443376351114568
+								},
+								{
+									"id": "destroy",
+									"objectClass": "SpinIcon",
+									"sid": 240272316185875
+								},
+								{
+									"id": "destroy",
+									"objectClass": "MagicalBladeIcon",
+									"sid": 545583129132877
+								},
+								{
+									"id": "destroy",
+									"objectClass": "ShockWaveIcon",
+									"sid": 861447729103304
+								},
+								{
+									"id": "destroy",
+									"objectClass": "SpiritOfDecayIcon",
+									"sid": 902449756273715
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Runners",
+									"sid": 562834447513423
+								},
+								{
+									"id": "destroy",
+									"objectClass": "cursorOverlappingBox",
+									"sid": 381847913952894
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 144255005024685,
+									"parameters": {
+										"name": "\"atributosDestroy\"",
+										"parameter-n": []
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 737509262166894,
+									"parameters": {
+										"seconds": "0.2"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 940645411693325,
+									"parameters": {
+										"variable": "SkillPointsScreen",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 400559563444740
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 344837960899483,
+									"parameters": {
+										"variable": "SkillPointsScreen"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 463981988455560,
+									"parameters": {
+										"object-to-create": "habilidadesFundo",
+										"layer": "\"HUD\"",
+										"x": "120",
+										"y": "79.434",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 157457568937463,
+									"parameters": {
+										"object-to-create": "Skillpoints",
+										"layer": "\"HUD\"",
+										"x": "121.554",
+										"y": " 80.93",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 577188113303472,
+									"parameters": {
+										"object-to-create": "Runners",
+										"layer": "\"HUD\"",
+										"x": "109.969",
+										"y": " 44.933",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 776698675264514,
+									"parameters": {
+										"object-to-create": "FortitudeIcon",
+										"layer": "\"HUD\"",
+										"x": "110.091",
+										"y": "45.013",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 958300714245798,
+									"parameters": {
+										"object-to-create": "GroundmagicIcon",
+										"layer": "\"HUD\"",
+										"x": "89.053",
+										"y": " 59.813",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 311614114197322,
+									"parameters": {
+										"object-to-create": "LionIcon",
+										"layer": "\"HUD\"",
+										"x": "110.057",
+										"y": " 71.946",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 815984132120817,
+									"parameters": {
+										"object-to-create": "SpinIcon",
+										"layer": "\"HUD\"",
+										"x": "131.071",
+										"y": "59.844",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 108793604615050,
+									"parameters": {
+										"object-to-create": "MagicalBladeIcon",
+										"layer": "\"HUD\"",
+										"x": "90.071",
+										"y": "81.942",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 537893881340589,
+									"parameters": {
+										"object-to-create": "ShockWaveIcon",
+										"layer": "\"HUD\"",
+										"x": "130.094",
+										"y": " 81.928",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 572259852463954,
+									"parameters": {
+										"object-to-create": "SpiritOfDecayIcon",
+										"layer": "\"HUD\"",
+										"x": "110.158",
+										"y": " 94.9",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 496460218623657,
+									"parameters": {
+										"object-to-create": "cursorOverlappingBox",
+										"layer": "\"HUD\"",
+										"x": "Runners.X",
+										"y": "Runners.Y",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 945554433712025,
+									"parameters": {
+										"name": "\"atributosSetSprite\"",
+										"parameter-n": []
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 133285995692964,
+									"parameters": {
+										"seconds": "0.2"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 953857436045227,
+									"parameters": {
+										"variable": "SkillPointsScreen",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 228431476256072
+						}
+					]
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Fortitude",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 481687730987913,
+									"parameters": {
+										"key": "\"Fortitude\"",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "FortitudeIcon",
+									"sid": 358977870586287,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Level3\""
+									}
+								}
+							],
+							"sid": 748191121286188,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 431819288271656
+										}
+									],
+									"actions": [
+										{
+											"id": "call-function",
+											"objectClass": "Function",
+											"sid": 318059914704521,
+											"parameters": {
+												"name": "\"AddMana&Hp\"",
+												"parameter-n": [
+													"20"
+												]
+											}
+										}
+									],
+									"sid": 157046995499990
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 431726765537993,
+									"parameters": {
+										"key": "\"Fortitude\"",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "FortitudeIcon",
+									"sid": 742492908273665,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Level2\""
+									}
+								},
+								{
+									"id": "add-key",
+									"objectClass": "Dictionary",
+									"sid": 563015181000315,
+									"parameters": {
+										"key": "\"AbleLion\"",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 468666912169661,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 829833782513637
+										}
+									],
+									"actions": [
+										{
+											"id": "call-function",
+											"objectClass": "Function",
+											"sid": 882874516394290,
+											"parameters": {
+												"name": "\"AddMana&Hp\"",
+												"parameter-n": [
+													"10"
+												]
+											}
+										}
+									],
+									"sid": 534302284641664
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 455516940369585,
+									"parameters": {
+										"key": "\"Fortitude\"",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "FortitudeIcon",
+									"sid": 933039908567211,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Active\""
+									}
+								},
+								{
+									"id": "add-key",
+									"objectClass": "Dictionary",
+									"sid": 571156420446054,
+									"parameters": {
+										"key": "\"AbleSpin\"",
+										"value": "1"
+									}
+								},
+								{
+									"id": "add-key",
+									"objectClass": "Dictionary",
+									"sid": 302789242499680,
+									"parameters": {
+										"key": "\"AbleGroundMagic\"",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 571898821118772,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 928101772696194
+										}
+									],
+									"actions": [
+										{
+											"id": "call-function",
+											"objectClass": "Function",
+											"sid": 124364831046669,
+											"parameters": {
+												"name": "\"AddMana&Hp\"",
+												"parameter-n": [
+													"5"
+												]
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "IconesSkills",
+											"sid": 524563678493521,
+											"parameters": {
+												"instance-variable": "SkillDescription",
+												"value": "\"Add 5 to HP and MP - Unlock Spin Attack and Ground Magic\""
+											}
+										}
+									],
+									"sid": 381980368778175
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 629404061725716,
+									"parameters": {
+										"key": "\"Fortitude\"",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "FortitudeIcon",
+									"sid": 660491060610581,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Inactive\""
+									}
+								}
+							],
+							"sid": 843668950096292
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-function",
+									"objectClass": "Function",
+									"sid": 289148149622874,
+									"parameters": {
+										"name": "\"AddMana&Hp\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "Dictionary",
+									"sid": 395955266902407,
+									"parameters": {
+										"key": "\"HPMAX\"",
+										"value": "Self.Get(\"HPMAX\") + Function.Param(0)"
+									}
+								},
+								{
+									"id": "add-key",
+									"objectClass": "Dictionary",
+									"sid": 998835066017225,
+									"parameters": {
+										"key": "\"MPMAX\"",
+										"value": "Self.Get(\"MPMAX\") + Function.Param(0)"
+									}
+								}
+							],
+							"sid": 144514027976256
+						}
+					],
+					"sid": 584012251670177
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Ground Magic",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 513022259362567,
+									"parameters": {
+										"key": "\"GroundMagic\"",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "GroundmagicIcon",
+									"sid": 122646491883426,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Level3\""
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 113188304652751,
+									"parameters": {
+										"name": "\"DanoGroundMagic\"",
+										"parameter-n": [
+											"18"
+										]
+									}
+								},
+								{
+									"id": "set-animation-speed",
+									"objectClass": "GroundBullet",
+									"sid": 518488747206016,
+									"parameters": {
+										"speed": "6"
+									}
+								}
+							],
+							"sid": 367018759403290
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 368656519632434,
+									"parameters": {
+										"key": "\"GroundMagic\"",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "GroundmagicIcon",
+									"sid": 905512459123435,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Level2\""
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 727171713656555,
+									"parameters": {
+										"name": "\"DanoGroundMagic\"",
+										"parameter-n": [
+											"14"
+										]
+									}
+								},
+								{
+									"id": "add-key",
+									"objectClass": "Dictionary",
+									"sid": 405019333938436,
+									"parameters": {
+										"key": "\"AbleMagicalBlade\"",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-animation-speed",
+									"objectClass": "GroundBullet",
+									"sid": 907889938007009,
+									"parameters": {
+										"speed": "8"
+									}
+								}
+							],
+							"sid": 968273351890025
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 643157216492278,
+									"parameters": {
+										"key": "\"GroundMagic\"",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "GroundmagicIcon",
+									"sid": 398961790397004,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Active\""
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 754971599506195,
+									"parameters": {
+										"name": "\"DanoGroundMagic\"",
+										"parameter-n": [
+											"8"
+										]
+									}
+								}
+							],
+							"sid": 977100052703897
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 499879742858767,
+									"parameters": {
+										"key": "\"GroundMagic\"",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "GroundmagicIcon",
+									"sid": 273650142302529,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Inactive\""
+									}
+								}
+							],
+							"sid": 468091863764294
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-function",
+									"objectClass": "Function",
+									"sid": 678115346400882,
+									"parameters": {
+										"name": "\"DanoGroundMagic\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "GroundBullet",
+									"sid": 894856721515736,
+									"parameters": {
+										"instance-variable": "DamageBullets",
+										"value": "Function.Param(0)"
+									}
+								}
+							],
+							"sid": 502079911367398
+						}
+					],
+					"sid": 277804527750414
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Lion",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 663912483154955,
+									"parameters": {
+										"key": "\"Lion\"",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "LionIcon",
+									"sid": 134389705609522,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Level3\""
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 814898890494876,
+									"parameters": {
+										"name": "\"HpManaRecover\"",
+										"parameter-n": [
+											"1",
+											"1"
+										]
+									}
+								}
+							],
+							"sid": 214510195710313
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 338233666045486,
+									"parameters": {
+										"key": "\"Lion\"",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "LionIcon",
+									"sid": 158037936017545,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Level2\""
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 963637678369522,
+									"parameters": {
+										"name": "\"HpManaRecover\"",
+										"parameter-n": [
+											"2",
+											"1"
+										]
+									}
+								}
+							],
+							"sid": 772171615380138
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 376498118698696,
+									"parameters": {
+										"key": "\"Lion\"",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "LionIcon",
+									"sid": 955499807036689,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Active\""
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 754519562995144,
+									"parameters": {
+										"name": "\"HpManaRecover\"",
+										"parameter-n": [
+											"3",
+											"1"
+										]
+									}
+								}
+							],
+							"sid": 755523443238136
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 323861005762530,
+									"parameters": {
+										"key": "\"Lion\"",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "LionIcon",
+									"sid": 342064757816210,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Inactive\""
+									}
+								}
+							],
+							"sid": 261024994808053
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-function",
+									"objectClass": "Function",
+									"sid": 928475761644703,
+									"parameters": {
+										"name": "\"HpManaRecover\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 678744150717257,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 829967458112446,
+											"parameters": {
+												"variable": "SkillPointsScreen"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Personagem",
+											"sid": 647997838878328,
+											"parameters": {
+												"instance-variable": "Die"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 785798945814617,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "every-x-seconds",
+													"objectClass": "System",
+													"sid": 111256262401874,
+													"parameters": {
+														"interval-seconds": "Function.Param(0)"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "call-function",
+													"objectClass": "Function",
+													"sid": 619454000439873,
+													"parameters": {
+														"name": "\"AjusteDeVida\"",
+														"parameter-n": [
+															"Function.Param(1)"
+														]
+													}
+												},
+												{
+													"id": "call-function",
+													"objectClass": "Function",
+													"sid": 838804212327195,
+													"parameters": {
+														"name": "\"AjusteDeMana\"",
+														"parameter-n": [
+															"Function.Param(1)"
+														]
+													}
+												}
+											],
+											"sid": 571551624904954
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 760960490372657
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "MagicalBlade",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 728726705707880,
+									"parameters": {
+										"key": "\"MagicalBlade\"",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "MagicalBladeIcon",
+									"sid": 172420058763862,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Level3\""
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 668114202736914,
+									"parameters": {
+										"name": "\"DanoMagicBlade\"",
+										"parameter-n": [
+											"26"
+										]
+									}
+								},
+								{
+									"id": "set-animation-speed",
+									"objectClass": "Bullet",
+									"sid": 129680007579513,
+									"parameters": {
+										"speed": "6"
+									}
+								}
+							],
+							"sid": 870432159047447
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 125717130163554,
+									"parameters": {
+										"key": "\"MagicalBlade\"",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "MagicalBladeIcon",
+									"sid": 984962383419315,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Level2\""
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 553248698689537,
+									"parameters": {
+										"name": "\"DanoMagicBlade\"",
+										"parameter-n": [
+											"18"
+										]
+									}
+								},
+								{
+									"id": "set-animation-speed",
+									"objectClass": "Bullet",
+									"sid": 290340756883433,
+									"parameters": {
+										"speed": "8"
+									}
+								}
+							],
+							"sid": 815411227896415
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 775701516268047,
+									"parameters": {
+										"key": "\"MagicalBlade\"",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "MagicalBladeIcon",
+									"sid": 489866885067893,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Active\""
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 704641842282188,
+									"parameters": {
+										"name": "\"DanoMagicBlade\"",
+										"parameter-n": [
+											"12"
+										]
+									}
+								}
+							],
+							"sid": 660065264158915
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 901556516151345,
+									"parameters": {
+										"key": "\"MagicalBlade\"",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "MagicalBladeIcon",
+									"sid": 590132357788280,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Inactive\""
+									}
+								}
+							],
+							"sid": 307675104726277
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-function",
+									"objectClass": "Function",
+									"sid": 533781040810858,
+									"parameters": {
+										"name": "\"DanoMagicBlade\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Bullet",
+									"sid": 292090290334305,
+									"parameters": {
+										"instance-variable": "DamageBullets",
+										"value": "Function.Param(0)"
+									}
+								}
+							],
+							"sid": 387726107034421
+						}
+					],
+					"sid": 365493972491431
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Shock Wave",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 293153606546818,
+									"parameters": {
+										"key": "\"ShockWave\"",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "ShockWaveIcon",
+									"sid": 631267115279321,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Level3\""
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 646461450565248,
+									"parameters": {
+										"name": "\"ShockWaveDano\"",
+										"parameter-n": [
+											"30"
+										]
+									}
+								}
+							],
+							"sid": 458205037310851
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 673075429052635,
+									"parameters": {
+										"key": "\"ShockWave\"",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "ShockWaveIcon",
+									"sid": 459087259427204,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Level2\""
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 844213182644207,
+									"parameters": {
+										"name": "\"ShockWaveDano\"",
+										"parameter-n": [
+											"20"
+										]
+									}
+								}
+							],
+							"sid": 930839083487574
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 184794119876129,
+									"parameters": {
+										"key": "\"ShockWave\"",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "ShockWaveIcon",
+									"sid": 469728398802447,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Active\""
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 352647870953145,
+									"parameters": {
+										"name": "\"ShockWaveDano\"",
+										"parameter-n": [
+											"15"
+										]
+									}
+								}
+							],
+							"sid": 976276174328518
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 867986560275433,
+									"parameters": {
+										"key": "\"ShockWave\"",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "ShockWaveIcon",
+									"sid": 283203674551014,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Inactive\""
+									}
+								}
+							],
+							"sid": 265513731421087
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-function",
+									"objectClass": "Function",
+									"sid": 247210787018885,
+									"parameters": {
+										"name": "\"ShockWaveDano\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-at-xy",
+									"objectClass": "CharacterAttacks",
+									"sid": 653107392234590,
+									"parameters": {
+										"x": "4",
+										"y": "2",
+										"value": "Function.Param(0)"
+									}
+								}
+							],
+							"sid": 415737337222588
+						}
+					],
+					"sid": 461647692032432
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Spin",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 290660651083767,
+									"parameters": {
+										"key": "\"Spin\"",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "SpinIcon",
+									"sid": 362864862618022,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Level3\""
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 152196488609959,
+									"parameters": {
+										"name": "\"DanoSpin\"",
+										"parameter-n": [
+											"20"
+										]
+									}
+								}
+							],
+							"sid": 971515736180560
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 313705459797302,
+									"parameters": {
+										"key": "\"Spin\"",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "SpinIcon",
+									"sid": 736968046798527,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Level2\""
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 706223705271959,
+									"parameters": {
+										"name": "\"DanoSpin\"",
+										"parameter-n": [
+											"15"
+										]
+									}
+								}
+							],
+							"sid": 657089545550843
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 918759969912593,
+									"parameters": {
+										"key": "\"Spin\"",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "SpinIcon",
+									"sid": 102603975581941,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Active\""
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 150989369807258,
+									"parameters": {
+										"name": "\"DanoSpin\"",
+										"parameter-n": [
+											"10"
+										]
+									}
+								},
+								{
+									"id": "add-key",
+									"objectClass": "Dictionary",
+									"sid": 704657847113332,
+									"parameters": {
+										"key": "\"AbleShockWave\"",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 791800863753529
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 935826707111768,
+									"parameters": {
+										"key": "\"Spin\"",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "SpinIcon",
+									"sid": 867955401173224,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Inactive\""
+									}
+								}
+							],
+							"sid": 331094591292192
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-function",
+									"objectClass": "Function",
+									"sid": 960861514558321,
+									"parameters": {
+										"name": "\"DanoSpin\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-at-xy",
+									"objectClass": "CharacterAttacks",
+									"sid": 129089282969576,
+									"parameters": {
+										"x": "5",
+										"y": "2",
+										"value": "Function.Param(0)"
+									}
+								}
+							],
+							"sid": 893165464893729
+						}
+					],
+					"sid": 795861124929853
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Spirit",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 833131819978400,
+									"parameters": {
+										"key": "\"SpiritOfDecay\"",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "SpiritOfDecayIcon",
+									"sid": 649059133744092,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Level3\""
+									}
+								}
+							],
+							"sid": 377245734884855
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 381479168895478,
+									"parameters": {
+										"key": "\"SpiritOfDecay\"",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "SpiritOfDecayIcon",
+									"sid": 962016297725573,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Level2\""
+									}
+								}
+							],
+							"sid": 156641013601262
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 435644293424823,
+									"parameters": {
+										"key": "\"SpiritOfDecay\"",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "SpiritOfDecayIcon",
+									"sid": 887685844740692,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Active\""
+									}
+								}
+							],
+							"sid": 537490747590416
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 424926441817137,
+									"parameters": {
+										"key": "\"SpiritOfDecay\"",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "SpiritOfDecayIcon",
+									"sid": 219805711701598,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"Inactive\""
+									}
+								}
+							],
+							"sid": 718441288560660
+						}
+					],
+					"sid": 311698274587151
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 388133041271747,
+							"parameters": {
+								"variable": "SkillPointsScreen"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 575969174840668,
+							"parameters": {
+								"name": "\"ReloadedSkillNumber\"",
+								"parameter-n": []
+							}
+						}
+					],
+					"sid": 603912884535485,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 372931405740889,
+									"parameters": {
+										"key": 74
+									}
+								}
+							],
+							"actions": [],
+							"sid": 287406512021121,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "IconesSkills",
+											"sid": 989071513121123,
+											"parameters": {
+												"object": "cursorOverlappingBox"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "IconesSkills",
+											"sid": 475280827474077,
+											"disabled": true,
+											"parameters": {
+												"instance-variable": "Block"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-value",
+											"objectClass": "Dictionary",
+											"sid": 890708094913335,
+											"parameters": {
+												"key": "\"Able\" & IconesSkills.nomeIcone",
+												"comparison": 1,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 662246338404517,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "IconesSkills",
+													"sid": 705608651687414,
+													"parameters": {
+														"instance-variable": "estado",
+														"comparison": 0,
+														"value": "\"Inactive\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-key",
+													"objectClass": "Dictionary",
+													"sid": 900421810935497,
+													"parameters": {
+														"key": "IconesSkills.nomeIcone",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 538837868188063
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "IconesSkills",
+													"sid": 408410258023362,
+													"parameters": {
+														"instance-variable": "estado",
+														"comparison": 0,
+														"value": "\"Active\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-key",
+													"objectClass": "Dictionary",
+													"sid": 798875638020853,
+													"parameters": {
+														"key": "IconesSkills.nomeIcone",
+														"value": "2"
+													}
+												}
+											],
+											"sid": 375215726469350
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "IconesSkills",
+													"sid": 326588507995676,
+													"parameters": {
+														"instance-variable": "estado",
+														"comparison": 0,
+														"value": "\"Level2\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-key",
+													"objectClass": "Dictionary",
+													"sid": 640371492085685,
+													"parameters": {
+														"key": "IconesSkills.nomeIcone",
+														"value": "3"
+													}
+												}
+											],
+											"sid": 300558061128621
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "IconesSkills",
+									"sid": 969020286209934,
+									"parameters": {
+										"object": "cursorOverlappingBox"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "NameSkill",
+									"sid": 618624862302961,
+									"parameters": {
+										"text": "IconesSkills.nomeIcone"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "FontDescription",
+									"sid": 712103461264811,
+									"parameters": {
+										"text": "SkillDescriptions.At(IconesSkills.numeroSkill,Dictionary.Get(IconesSkills.nomeIcone)+1)"
+									}
+								}
+							],
+							"sid": 736968405841727
+						}
+					]
+				}
+			],
+			"sid": 819581596749435
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 125889909749719,
+					"parameters": {
+						"key": 9
+					}
+				}
+			],
+			"actions": [],
+			"sid": 453671435337487,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 273994275136958,
+							"parameters": {
+								"variable": "ArmsIsOnScreen"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Arms",
+							"sid": 132206265513176,
+							"parameters": {
+								"instance-variable": "timer",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Arms",
+							"sid": 751920314149232,
+							"parameters": {
+								"instance-variable": "estado",
+								"value": "\"entrando\""
+							}
+						}
+					],
+					"sid": 916894998458320
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 651379446025859,
+							"parameters": {
+								"variable": "ArmsIsOnScreen"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 756590138017793,
+							"parameters": {
+								"name": "\"ArmsHUD\"",
+								"parameter-n": []
+							}
+						}
+					],
+					"sid": 205816855031125
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-function",
+					"objectClass": "Function",
+					"sid": 211704414164590,
+					"parameters": {
+						"name": "\"ArmsHUD\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 648560204031070,
+					"parameters": {
+						"variable": "ArmsIsOnScreen",
+						"value": "true"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 131322883905715,
+					"parameters": {
+						"object-to-create": "Arms",
+						"layer": "\"HUD\"",
+						"x": "270.852",
+						"y": "137",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 351727710700600,
+					"parameters": {
+						"object-to-create": "ArmsSelect",
+						"layer": "\"HUD\"",
+						"x": "251.774",
+						"y": "144.171",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 487848743761714,
+					"parameters": {
+						"object-to-create": "ItensHud",
+						"layer": "\"HUD\"",
+						"x": "-30",
+						"y": "137",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Arms",
+					"sid": 779287942030297,
+					"parameters": {
+						"instance-variable": "timer",
+						"value": "3"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Arms",
+					"sid": 880780551334411,
+					"parameters": {
+						"instance-variable": "estado",
+						"value": "\"entrando\""
+					}
+				}
+			],
+			"sid": 505833647691050
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Arms",
+					"sid": 874836944818802,
+					"parameters": {
+						"instance-variable": "estado",
+						"comparison": 0,
+						"value": "\"entrando\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 128114414576245,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Arms",
+							"sid": 221212232214280,
+							"parameters": {
+								"comparison": 5,
+								"x-co-ordinate": "205"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Arms",
+							"sid": 451594870318606,
+							"parameters": {
+								"x": "Self.X - 180 * dt"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "ArmsSelect",
+							"sid": 685725055270864,
+							"parameters": {
+								"x": "Self.X - 180 * dt"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "ItensHud",
+							"sid": 777780669291790,
+							"parameters": {
+								"x": "Self.X + 180 * dt"
+							}
+						}
+					],
+					"sid": 391370191625970
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Arms",
+					"sid": 724864136852409,
+					"parameters": {
+						"instance-variable": "timer",
+						"comparison": 4,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Arms",
+					"sid": 532586730458877,
+					"parameters": {
+						"instance-variable": "timer",
+						"value": "dt"
+					}
+				}
+			],
+			"sid": 781795354477267
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Arms",
+					"sid": 826175253377955,
+					"parameters": {
+						"instance-variable": "timer",
+						"comparison": 2,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Arms",
+					"sid": 283264745616927,
+					"parameters": {
+						"instance-variable": "estado",
+						"value": "\"saindo\""
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "Arms",
+					"sid": 675509806246512,
+					"parameters": {
+						"x": "Self.X + 180 * dt"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "ArmsSelect",
+					"sid": 707041996245276,
+					"parameters": {
+						"x": "Self.X + 180 * dt"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "ItensHud",
+					"sid": 225312971580760,
+					"parameters": {
+						"x": "Self.X - 180 * dt"
+					}
+				}
+			],
+			"sid": 810216312314802
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Arms",
+					"sid": 553342899835959,
+					"parameters": {
+						"instance-variable": "estado",
+						"comparison": 0,
+						"value": "\"saindo\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 313047977617925,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-screen",
+							"objectClass": "Arms",
+							"sid": 938189214657513,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Arms",
+							"sid": 558979663998235
+						},
+						{
+							"id": "destroy",
+							"objectClass": "ArmsSelect",
+							"sid": 168529938620969
+						},
+						{
+							"id": "destroy",
+							"objectClass": "ItensHud",
+							"sid": 242537375843163
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 798798634736614,
+							"parameters": {
+								"variable": "ArmsIsOnScreen",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 333220739045621
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Bau",
+					"sid": 569885634735768,
+					"parameters": {
+						"object": "PersonagemHitbox"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bau",
+					"sid": 710437129813176,
+					"parameters": {
+						"instance-variable": "Aberto",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 167063367537740
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Bau",
+					"sid": 607160904582657,
+					"parameters": {
+						"instance-variable": "Aberto"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Bau",
+					"sid": 425952766320199,
+					"parameters": {
+						"animation": "\"Animation 2\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 394534985452823
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "Bau",
+					"sid": 348894640725395,
+					"parameters": {
+						"animation": "\"Animation 2\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "call-function",
+					"objectClass": "Function",
+					"sid": 146866819125253,
+					"parameters": {
+						"name": "\"SpawnBau\"",
+						"parameter-n": [
+							"Bau.X",
+							"Bau.Y"
+						]
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Bau",
+					"sid": 979196239836495
+				}
+			],
+			"sid": 680735848848507
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-function",
+					"objectClass": "Function",
+					"sid": 607918417837777,
+					"parameters": {
+						"name": "\"SpawnBau\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 731264730780291,
+					"parameters": {
+						"object-to-create": "Sack",
+						"layer": "Bau.LayerName",
+						"x": "Function.Param(0)",
+						"y": "Function.Param(1)",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 230509013261984
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 745840020046684,
+					"parameters": {
+						"variable": "ArmsIsOnScreen"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 255956140370711,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 990946442570630,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Arms",
+							"sid": 834237333007457,
+							"parameters": {
+								"instance-variable": "timer",
+								"value": "3"
+							}
+						}
+					],
+					"sid": 131960932640591,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "ArmsSelect",
+									"sid": 302163746614761,
+									"parameters": {
+										"instance-variable": "posicaoSelector",
+										"comparison": 2,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-x",
+									"objectClass": "ArmsSelect",
+									"sid": 754821816936004,
+									"parameters": {
+										"x": "Self.X + 19"
+									}
+								},
+								{
+									"id": "set-y",
+									"objectClass": "ArmsSelect",
+									"sid": 411013842657540,
+									"parameters": {
+										"y": "Self.Y - 3"
+									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "ArmsSelect",
+									"sid": 571491345928210,
+									"parameters": {
+										"instance-variable": "posicaoSelector",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 304084708609524
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 577821163118143
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "ArmsSelect",
+									"sid": 636117364761420,
+									"parameters": {
+										"instance-variable": "posicaoSelector",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-x",
+									"objectClass": "ArmsSelect",
+									"sid": 282360568748956,
+									"parameters": {
+										"x": "Self.X - 38"
+									}
+								},
+								{
+									"id": "set-y",
+									"objectClass": "ArmsSelect",
+									"sid": 157388031385269,
+									"parameters": {
+										"y": "144.171"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "ArmsSelect",
+									"sid": 577744208936724,
+									"parameters": {
+										"instance-variable": "posicaoSelector",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 328138111758644
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 546758943750303
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "ArmsSelect",
+									"sid": 392297816509901,
+									"parameters": {
+										"instance-variable": "posicaoSelector",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-x",
+									"objectClass": "ArmsSelect",
+									"sid": 212562517976096,
+									"parameters": {
+										"x": "Self.X + 19"
+									}
+								},
+								{
+									"id": "set-y",
+									"objectClass": "ArmsSelect",
+									"sid": 177366626043307,
+									"parameters": {
+										"y": "Self.Y - 5.1"
+									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "ArmsSelect",
+									"sid": 602716261998942,
+									"parameters": {
+										"instance-variable": "posicaoSelector",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 122141872536692
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "BarraInimigo",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 248999599515557,
+							"parameters": {
+								"object": "Inimigos"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Inimigos",
+							"sid": 808514525892067,
+							"parameters": {
+								"instance-variable": "confBar"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 240613471184793,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 405993812181543
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Inimigos",
+									"sid": 105935176251752,
+									"parameters": {
+										"object": "HpMain",
+										"layer": "Inimigos.LayerName",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "HpMain",
+									"sid": 200127213833793,
+									"parameters": {
+										"x": "Self.X - Inimigos.X_bar",
+										"y": "Self.Y - Inimigos.Y_bar"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "HpMain",
+									"sid": 546502641063468,
+									"parameters": {
+										"instance-variable": "InimigoUID",
+										"value": "Inimigos.UID"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Inimigos",
+									"sid": 726971413130325,
+									"parameters": {
+										"object": "HpBarInimigo",
+										"layer": "Inimigos.LayerName",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "HpBarInimigo",
+									"sid": 387912569813864,
+									"parameters": {
+										"x": "Self.X - Inimigos.X_bar",
+										"y": "Self.Y - Inimigos.Y_bar"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "HpBarInimigo",
+									"sid": 334512870510951,
+									"parameters": {
+										"instance-variable": "InimigoUID",
+										"value": "Inimigos.UID"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Inimigos",
+									"sid": 650365546112718,
+									"parameters": {
+										"instance-variable": "confBar",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 462059994269541
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 237432216247611,
+							"parameters": {
+								"object": "Inimigos"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Inimigos",
+							"sid": 826729842134351,
+							"parameters": {
+								"instance-variable": "confBar"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 431847013786349,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 150766943357349,
+									"parameters": {
+										"object": "HpBarInimigo",
+										"expression": "HpBarInimigo.InimigoUID",
+										"comparison": 0,
+										"value": "Inimigos.UID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "HpBarInimigo",
+									"sid": 947541242511537,
+									"parameters": {
+										"x": "Inimigos.X - Inimigos.X_bar",
+										"y": "Inimigos.Y - Inimigos.Y_bar"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "HpBarInimigo",
+									"sid": 849401651238405,
+									"parameters": {
+										"instance-variable": "HpTamanhoBarraMax",
+										"value": "Inimigos.Vida * 20"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "HpBarInimigo",
+									"sid": 673090575440230,
+									"parameters": {
+										"instance-variable": "TamanhoFinalBarra",
+										"value": "HpBarInimigo.HpTamanhoBarraMax / Inimigos.VidaMax"
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "HpBarInimigo",
+									"sid": 218240321719973,
+									"parameters": {
+										"width": "HpBarInimigo.TamanhoFinalBarra"
+									}
+								}
+							],
+							"sid": 140508746709032
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 496584289058018,
+									"parameters": {
+										"object": "HpMain",
+										"expression": "HpMain.InimigoUID",
+										"comparison": 0,
+										"value": "Inimigos.UID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "HpMain",
+									"sid": 806807246126414,
+									"parameters": {
+										"x": "Inimigos.X - Inimigos.X_bar",
+										"y": "Inimigos.Y - Inimigos.Y_bar"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "HpMain",
+									"sid": 809136192756383,
+									"parameters": {
+										"instance-variable": "HpTamanhoBarraMax",
+										"value": "Inimigos.Vida * 20"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "HpMain",
+									"sid": 895334987170202,
+									"parameters": {
+										"instance-variable": "TamanhoFinalBarra",
+										"value": "HpMain.HpTamanhoBarraMax / Inimigos.VidaMax"
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "HpMain",
+									"sid": 503470571998662,
+									"disabled": true,
+									"parameters": {
+										"width": "HpMain.TamanhoFinalBarra"
+									}
+								}
+							],
+							"sid": 135805126172960
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Inimigos",
+									"sid": 435559076769733,
+									"parameters": {
+										"instance-variable": "Vida",
+										"comparison": 2,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Inimigos",
+									"sid": 308444946977473,
+									"parameters": {
+										"instance-variable": "Vida",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 314225924627647
+						}
+					]
+				}
+			],
+			"sid": 897612606866588
+		}
+	],
+	"sid": 739031526113552
+}

@@ -1,0 +1,44 @@
+{
+	"name": "ItensHud",
+	"plugin-id": "Sprite",
+	"sid": 270313000723241,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "timer",
+			"type": "number",
+			"desc": "",
+			"sid": 799573314796754
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 61,
+						"height": 36,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 289,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 914409691528290,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

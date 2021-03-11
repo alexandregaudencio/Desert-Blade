@@ -1,0 +1,75 @@
+{
+	"name": "PlayerBase",
+	"plugin-id": "Sprite",
+	"sid": 835813058042617,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Timer",
+			"type": "number",
+			"desc": "",
+			"sid": 992159496963536
+		},
+		{
+			"name": "CameraDesfixa",
+			"type": "number",
+			"desc": "",
+			"sid": 762577561126343
+		},
+		{
+			"name": "Position",
+			"type": "number",
+			"desc": "",
+			"sid": 375498155152054
+		},
+		{
+			"name": "timerStart",
+			"type": "number",
+			"desc": "",
+			"sid": 402321450157607
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 143344113494212
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 40,
+						"height": 72,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 815920737467465,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

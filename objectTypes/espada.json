@@ -1,0 +1,65 @@
+{
+	"name": "espada",
+	"plugin-id": "Sprite",
+	"sid": 335211416845041,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 795293565919579
+		},
+		{
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 929590995958301
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 439609169590256
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 15,
+						"height": 3,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 80,
+						"collisionPoly": {
+							"points": [
+								0.005208333333333339,
+								0.36979166666666674,
+								0.8041666666666668,
+								0.010416666666666668,
+								0.8062499999999995,
+								0.9947916666666666,
+								0.003125,
+								0.630208333333333
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 738200120750072,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

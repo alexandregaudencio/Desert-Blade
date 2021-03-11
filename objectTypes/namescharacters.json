@@ -1,0 +1,33 @@
+{
+	"name": "NamesCharacters",
+	"plugin-id": "Spritefont2",
+	"sid": 972987090380779,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Texto",
+			"type": "string",
+			"desc": "",
+			"sid": 787888082616057
+		},
+		{
+			"name": "Dialogoaberto",
+			"type": "boolean",
+			"desc": "",
+			"sid": 930434814565947
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 128,
+		"height": 256,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 150,
+		"useCollisionPoly": true
+	}
+}

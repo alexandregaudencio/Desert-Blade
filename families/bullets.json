@@ -1,0 +1,20 @@
+{
+	"name": "bullets",
+	"plugin-id": "Sprite",
+	"sid": 516523496996396,
+	"instanceVariables": [
+		{
+			"name": "DamageBullets",
+			"type": "number",
+			"desc": "",
+			"sid": 762991523682556
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Bullet",
+		"GroundBullet",
+		"Knife"
+	]
+}

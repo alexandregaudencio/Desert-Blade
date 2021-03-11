@@ -1,0 +1,87 @@
+{
+	"name": "Bau",
+	"plugin-id": "Sprite",
+	"sid": 397191651507564,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Aberto",
+			"type": "boolean",
+			"desc": "",
+			"sid": 915271524836723
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 22,
+						"height": 19,
+						"originX": 0.5,
+						"originY": 0.9473684210526315,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 330,
+						"collisionPoly": {
+							"points": [
+								0.09090909090909091,
+								0.05263157894736842,
+								0.5,
+								0.05263157894736842,
+								0.8636363636363636,
+								0.05263157894736842,
+								0.9090909090909091,
+								0.5263157894736842,
+								0.8181818181818182,
+								0.8947368421052632,
+								0.5,
+								0.8947368421052632,
+								0.13636363636363635,
+								0.8947368421052632,
+								0.045454545454545456,
+								0.5263157894736842
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 482343257474330,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 22,
+						"height": 23,
+						"originX": 0.5,
+						"originY": 0.9565217391304348,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 335,
+						"useCollisionPoly": true,
+						"duration": 5
+					}
+				],
+				"sid": 914982501036088,
+				"name": "Animation 2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"name": "Camera",
+	"plugin-id": "Sprite",
+	"sid": 978587454203820,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "timer",
+			"type": "number",
+			"desc": "",
+			"sid": 652877854256689
+		},
+		{
+			"name": "CameraDesfixa",
+			"type": "boolean",
+			"desc": "",
+			"sid": 844157001212701
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 229948918002551
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 14,
+						"height": 14,
+						"originX": 0.5,
+						"originY": -0.07142857142857142,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 35,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 383997130057649,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

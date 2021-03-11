@@ -1,0 +1,37 @@
+{
+	"name": "Companion",
+	"plugin-id": "Sprite",
+	"sid": 402514573042702,
+	"instanceVariables": [
+		{
+			"name": "estado",
+			"type": "string",
+			"desc": "",
+			"sid": 402028730046640
+		},
+		{
+			"name": "direcao",
+			"type": "string",
+			"desc": "",
+			"sid": 289926184761196
+		},
+		{
+			"name": "startTimer",
+			"type": "number",
+			"desc": "",
+			"sid": 973289979711114
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 550735315126709
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Amon",
+		"Krish"
+	]
+}

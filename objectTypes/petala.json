@@ -1,0 +1,73 @@
+{
+	"name": "Petala",
+	"plugin-id": "Sprite",
+	"sid": 328781828316375,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 704952138896862
+		},
+		{
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 959025782181537
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 519726218902971
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 58,
+						"height": 58,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 75,
+						"collisionPoly": {
+							"points": [
+								0.15517241379310345,
+								0.15517241379310345,
+								0.5,
+								0.017241379310344827,
+								0.8275862068965517,
+								0.15517241379310345,
+								0.9655172413793104,
+								0.5,
+								0.8275862068965517,
+								0.8275862068965517,
+								0.5,
+								0.9655172413793104,
+								0.15517241379310345,
+								0.8275862068965517,
+								0.017241379310344827,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 621362942018981,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

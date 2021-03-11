@@ -1,0 +1,106 @@
+{
+	"name": "SpiritOfDecayIcon",
+	"plugin-id": "Sprite",
+	"sid": 236592551781883,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 14,
+						"height": 14,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 465,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 487046469778213,
+				"name": "Active",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 17,
+						"originX": 0.4375,
+						"originY": 0.4117647058823529,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 466,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 771124397893143,
+				"name": "Inactive",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 24,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 510,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 927512939003591,
+				"name": "Level2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 24,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 511,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 319723246822253,
+				"name": "Level3",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

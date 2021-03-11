@@ -1,0 +1,176 @@
+{
+	"name": "Tilemap_ok",
+	"plugin-id": "Tilemap",
+	"sid": 892060603892295,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 118473140080795
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 185355783602429
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 240,
+		"height": 144,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 145,
+		"useCollisionPoly": true
+	},
+	"tile-collision-polys": {
+		"6": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"8": {
+			"collisionPoly": {
+				"points": [
+					1,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"47": {
+			"collisionPoly": {
+				"points": [
+					1,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"51": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"52": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"61": {
+			"collisionPoly": {
+				"points": [
+					1,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"67": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"75": {
+			"collisionPoly": {
+				"points": [
+					1,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"76": {
+			"collisionPoly": {
+				"points": [
+					1,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"82": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"83": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		}
+	}
+}

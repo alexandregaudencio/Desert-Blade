@@ -1,0 +1,459 @@
+{
+	"name": "eControl",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Trigger",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Gatilho necessário para executar as ações",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 126264976851844
+		},
+		{
+			"eventType": "variable",
+			"name": "Command",
+			"type": "string",
+			"initialValue": "",
+			"comment": "Histórico de comando de Input",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 932809601244213
+		},
+		{
+			"eventType": "comment",
+			"text": "Event Sheet dedicado a todos os eventos de controle"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Arcade Control",
+			"description": "Esse grupo agrega os eventos responsáveis pelo funcionamento do GamePad",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Stand",
+					"description": "Define as condições de standby",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 974234618145873,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-x-axis",
+										"comparison": 4,
+										"value": "-20"
+									}
+								},
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 799577407115383,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-x-axis",
+										"comparison": 2,
+										"value": "20"
+									}
+								},
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 947602728207109,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-y-axis",
+										"comparison": 4,
+										"value": "-20"
+									}
+								},
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 508378117331755,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-y-axis",
+										"comparison": 2,
+										"value": "20"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 182529747903190,
+									"parameters": {
+										"variable": "Trigger"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "ArcadeControl",
+									"sid": 980404538638688,
+									"parameters": {
+										"animation": "\"Stand\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 744139177064956
+						}
+					],
+					"sid": 597669710856890
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Basic Moviment",
+					"description": "Movimentos básicos que garantem o deslocamento do personagem ",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 575083237669005,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-x-axis",
+										"comparison": 2,
+										"value": "-80"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "ArcadeControl",
+									"sid": 634702169310166,
+									"parameters": {
+										"animation": "\"Left\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 535041078764404,
+									"parameters": {
+										"variable": "Command",
+										"value": "\"Left, \""
+									}
+								}
+							],
+							"sid": 326894806155296
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 798109879669776,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-x-axis",
+										"comparison": 4,
+										"value": "80"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "ArcadeControl",
+									"sid": 874799823747962,
+									"parameters": {
+										"animation": "\"Right\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 457465549017910,
+									"parameters": {
+										"variable": "Command",
+										"value": "\"Right, \""
+									}
+								}
+							],
+							"sid": 852689538055179
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 563761344419098,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-y-axis",
+										"comparison": 2,
+										"value": "-80"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "ArcadeControl",
+									"sid": 246944073299677,
+									"parameters": {
+										"animation": "\"Up\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 767161149160914,
+									"parameters": {
+										"variable": "Command",
+										"value": "\"Up, \""
+									}
+								}
+							],
+							"sid": 242335319984114
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 896379836000673,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-y-axis",
+										"comparison": 4,
+										"value": "80"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "ArcadeControl",
+									"sid": 869907068600845,
+									"parameters": {
+										"animation": "\"Down\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 712208498328445,
+									"parameters": {
+										"variable": "Command",
+										"value": "\"Down, \""
+									}
+								}
+							],
+							"sid": 409061373480024
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-any-animation-finished",
+									"objectClass": "ArcadeControl",
+									"sid": 175476782906212
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 810763494643262,
+									"parameters": {
+										"variable": "Trigger",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 885928806314878
+						}
+					],
+					"sid": 524683400523969
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Actions Group",
+					"description": "Grupo dedicado as ações do personagem",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 273501088292990,
+									"parameters": {
+										"gamepad": "0",
+										"button": "button-a"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "ArcadeControl",
+									"sid": 186465638896137,
+									"parameters": {
+										"animation": "\"LightSlash\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 168956916359714,
+									"parameters": {
+										"variable": "Trigger",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 955210979533527
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 806449491282955,
+									"parameters": {
+										"gamepad": "0",
+										"button": "button-b"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "ArcadeControl",
+									"sid": 527044072532611,
+									"parameters": {
+										"animation": "\"HeavySlash\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 798213871018064,
+									"parameters": {
+										"variable": "Trigger",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 288283749641494
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 180132334511886,
+									"parameters": {
+										"gamepad": "0",
+										"button": "button-x"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "ArcadeControl",
+									"sid": 993030997597168,
+									"parameters": {
+										"animation": "\"Kick\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 845496431951142,
+									"parameters": {
+										"variable": "Trigger",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 650401242919090
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 213314336733086,
+									"parameters": {
+										"gamepad": "0",
+										"button": "button-y"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "ArcadeControl",
+									"sid": 962902442853276,
+									"parameters": {
+										"animation": "\"Counter\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 700456534204353,
+									"parameters": {
+										"variable": "Trigger",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 563215165722478
+						}
+					],
+					"sid": 810391214576433
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "System Set",
+					"description": "Atribui as informações para as variáveis a partir dos comandos de Input",
+					"isActiveOnStart": true,
+					"children": [],
+					"sid": 535295944221370
+				}
+			],
+			"sid": 103166510400252
+		}
+	],
+	"sid": 183208928517561
+}

@@ -1,0 +1,22 @@
+{
+	"name": "eMain",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "eSystem"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "eEnemies"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "eItens"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "eCutscene"
+		}
+	],
+	"sid": 299678209265853
+}

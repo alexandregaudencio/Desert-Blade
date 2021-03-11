@@ -1,0 +1,649 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 23404,
+	"name": "Desert Blade",
+	"runtime": "c3",
+	"useWorker": "dom",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Function",
+			"name": "Function",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Dictionary",
+			"name": "Dictionary",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "gamepad",
+			"name": "Gamepad",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "brightness",
+			"name": "Brightness",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "replacecolor",
+			"name": "Replace color",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "setcolor",
+			"name": "Set color",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		}
+	],
+	"uniqueId": "9jihr745wjs",
+	"objectTypes": {
+		"items": [
+			"AreiaSom",
+			"Item",
+			"HuDGaru",
+			"HPBarra",
+			"MPBarra",
+			"FundoBarraHp",
+			"MPFundoBarra",
+			"habilidadesFundo",
+			"Skillpoints",
+			"Arms",
+			"ItensHud",
+			"Bau",
+			"Sack",
+			"ArmsSelect",
+			"TiledBackground",
+			"TiledBackground2",
+			"TiledBackground3",
+			"HpMain",
+			"HpBarInimigo",
+			"espada",
+			"boxlateral",
+			"tapaburaco",
+			"dCaixa",
+			"ContDamaged",
+			"Amon",
+			"Krish",
+			"Stop",
+			"slide",
+			"NamesCharacters",
+			"MostraDanoInimigo",
+			"hitColisionLight",
+			"hitColisionHeavy",
+			"hitColisionBullet",
+			"FortitudeIcon",
+			"GroundmagicIcon",
+			"LionIcon",
+			"MagicalBladeIcon",
+			"ShockWaveIcon",
+			"SpinIcon",
+			"SpiritOfDecayIcon",
+			"Runners",
+			"atributosSprites",
+			"cursorOverlappingBox",
+			"NameSkill",
+			"Sprite",
+			"SpriteFont2",
+			"CinematicFont",
+			"NameSkill2",
+			"FontDescription",
+			"Knife",
+			"Comandos",
+			"Gnolly",
+			"Jatayu",
+			"ArcadeControl",
+			"Gamepad"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"Personagem",
+					"PersonagemHitbox",
+					"PlayerBase",
+					"Camera"
+				],
+				"subfolders": [],
+				"name": "Personagem"
+			},
+			{
+				"items": [
+					"groundsmoke",
+					"Imagem",
+					"DialogoCaixa",
+					"SpriteFont",
+					"Consumiveis"
+				],
+				"subfolders": [],
+				"name": "Misc"
+			},
+			{
+				"items": [
+					"Tilemap2",
+					"subtilemap",
+					"Tilemap"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"Plataforms",
+							"Scene_Objects",
+							"Tilemap_ok"
+						],
+						"subfolders": [],
+						"name": "new tiles"
+					}
+				],
+				"name": "TileSet"
+			},
+			{
+				"items": [
+					"Audio",
+					"Function",
+					"Keyboard",
+					"Dictionary"
+				],
+				"subfolders": [],
+				"name": "Function"
+			},
+			{
+				"items": [
+					"Enemy",
+					"Rompo",
+					"Garuda",
+					"Detector",
+					"DetectorPiterodatilo"
+				],
+				"subfolders": [],
+				"name": "Enemies"
+			},
+			{
+				"items": [
+					"Box"
+				],
+				"subfolders": [],
+				"name": "Destructive "
+			},
+			{
+				"items": [
+					"barreira",
+					"zone_of_destruction",
+					"new_stage",
+					"CavernaSom"
+				],
+				"subfolders": [],
+				"name": "Collisor"
+			},
+			{
+				"items": [
+					"plataformaMovel_v",
+					"plataformaMovel_v2",
+					"plataformaTimer"
+				],
+				"subfolders": [],
+				"name": "Plataforma"
+			},
+			{
+				"items": [
+					"Bullet",
+					"GroundBullet",
+					"PetaBomb",
+					"explosion",
+					"Petala",
+					"ExplosaoHitbox"
+				],
+				"subfolders": [],
+				"name": "Bullets"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"Cine_Bar",
+							"Text_Bar",
+							"howtoplay"
+						],
+						"subfolders": [],
+						"name": "Howtoplay"
+					}
+				],
+				"name": "Cinematic"
+			},
+			{
+				"items": [
+					"ArrayTutorial",
+					"CharacterAttacks",
+					"SkillDescriptions"
+				],
+				"subfolders": [],
+				"name": "Arrays"
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"Family1",
+			"Inimigos",
+			"bullets",
+			"Companion",
+			"IconesSkills"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Stage_0",
+			"LTest Room",
+			"LBank",
+			"LTest Room_2",
+			"Stage_1",
+			"ControlSection"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"eSystem",
+			"eMain",
+			"eEnemies",
+			"eItens",
+			"eCutscene",
+			"eTutorial",
+			"eControl"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "light_1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 118147539696828
+				},
+				{
+					"name": "light_2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 252572878806276
+				},
+				{
+					"name": "heavy_1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 918102209769044
+				},
+				{
+					"name": "heavy_2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 471912208230629
+				},
+				{
+					"name": "attack_1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 824210773221132
+				},
+				{
+					"name": "attack_2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 410194368286648
+				},
+				{
+					"name": "attack_3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 584108295409629
+				},
+				{
+					"name": "move_1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 369082701053506
+				},
+				{
+					"name": "move_3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 274217561856281
+				},
+				{
+					"name": "move_4.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 725286843076959
+				},
+				{
+					"name": "move_5.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 315568529887659
+				},
+				{
+					"name": "step_1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 210606839052022
+				},
+				{
+					"name": "step_2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 329124223519978
+				},
+				{
+					"name": "onlanded.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 236529190899179
+				},
+				{
+					"name": "smokemakesounds.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 997620956847595
+				},
+				{
+					"name": "main_theme.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 285468981843166
+				}
+			],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 265606706867810,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 642261339109599,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 721013158565411,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 756773994963516,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				},
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 651465812582175,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 282780565077918,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 702912900936881,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"useLoaderLayout": true,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useHighDpi": true,
+		"orientations": "landscape",
+		"enableWebGL": true,
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "nearest",
+		"downscaling": "medium",
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"clearBackground": true,
+		"enhancedAccelerationPrecision": true,
+		"cordovaiOSScheme": "file"
+	},
+	"viewportWidth": 240,
+	"viewportHeight": 160,
+	"firstLayout": null
+}

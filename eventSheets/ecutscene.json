@@ -1,0 +1,957 @@
+{
+	"name": "eCutscene",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "horaDoSlide",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 673853599919965
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 456172447088562,
+					"parameters": {
+						"variable": "start",
+						"comparison": 0,
+						"value": "\"start\""
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 572765751995388,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"Stage_0\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personagem",
+					"sid": 960245074067675,
+					"parameters": {
+						"instance-variable": "cutsceneMode",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 853883126208729,
+					"parameters": {
+						"group-name": "\"Teclado\"",
+						"state": "deactivated"
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 406348169400716,
+					"parameters": {
+						"group-name": "\"Controle De Animações\"",
+						"state": "deactivated"
+					}
+				},
+				{
+					"id": "set-max-speed",
+					"objectClass": "PlayerBase",
+					"sid": 753102873957384,
+					"behaviorType": "Platform",
+					"parameters": {
+						"max-speed": "60"
+					}
+				}
+			],
+			"sid": 702142365746817,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 360097114674284
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Companion",
+							"sid": 779069263001079,
+							"parameters": {
+								"instance-variable": "startTimer",
+								"value": "1.2"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PlayerBase",
+							"sid": 977192759210356,
+							"parameters": {
+								"instance-variable": "timerStart",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 907729929198556
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 798955473515784
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Companion",
+							"sid": 739601946062660,
+							"parameters": {
+								"animation": "Companion.estado & \"_\" & Companion.direcao",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 299660997470784
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "PlayerBase",
+							"sid": 489592226053966,
+							"parameters": {
+								"instance-variable": "timerStart",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "PlayerBase",
+							"sid": 989796756320896,
+							"parameters": {
+								"instance-variable": "timerStart",
+								"value": "dt"
+							}
+						}
+					],
+					"sid": 580197759651608
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "PlayerBase",
+							"sid": 178348190792407,
+							"parameters": {
+								"instance-variable": "timerStart",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 677026215180787,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 716801197146314,
+									"parameters": {
+										"variable": "horaDoSlide"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Personagem",
+									"sid": 415437082598916,
+									"parameters": {
+										"instance-variable": "Estado",
+										"value": "\"walk\""
+									}
+								}
+							],
+							"sid": 597437545471581
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 302071989231187
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Personagem",
+									"sid": 436231230259082,
+									"parameters": {
+										"instance-variable": "Estado",
+										"value": "\"sliding\""
+									}
+								}
+							],
+							"sid": 770341022463135
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Personagem",
+							"sid": 664676864011237,
+							"parameters": {
+								"instance-variable": "Estado",
+								"comparison": 0,
+								"value": "\"walk\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Personagem",
+							"sid": 647010014000693,
+							"parameters": {
+								"instance-variable": "Estado",
+								"comparison": 0,
+								"value": "\"sliding\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "PlayerBase",
+							"sid": 638391013688766,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 237024544358333,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Personagem",
+									"sid": 172404769531689,
+									"parameters": {
+										"instance-variable": "Direcao",
+										"comparison": 0,
+										"value": "\"right\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "PlayerBase",
+									"sid": 124777983910230,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 461839160134266
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Personagem",
+									"sid": 202968096173279,
+									"parameters": {
+										"instance-variable": "Direcao",
+										"comparison": 0,
+										"value": "\"left\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "PlayerBase",
+									"sid": 191529117676737,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 505451434797767
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Personagem",
+							"sid": 979732085350863,
+							"parameters": {
+								"instance-variable": "Estado",
+								"comparison": 0,
+								"value": "\"idle\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "PlayerBase",
+							"sid": 595153508517324,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 551687033071875
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Companion",
+							"sid": 493386216913137,
+							"parameters": {
+								"instance-variable": "startTimer",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Companion",
+							"sid": 707576058035864,
+							"parameters": {
+								"instance-variable": "startTimer",
+								"value": "dt"
+							}
+						}
+					],
+					"sid": 375701933144513
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Companion",
+							"sid": 805750430509929,
+							"parameters": {
+								"instance-variable": "startTimer",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Companion",
+							"sid": 323555340637543,
+							"parameters": {
+								"instance-variable": "estado",
+								"value": "\"run\""
+							}
+						}
+					],
+					"sid": 498407398850430,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 627832044007735,
+									"parameters": {
+										"variable": "horaDoSlide"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Companion",
+									"sid": 551635167796774,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"run\""
+									}
+								}
+							],
+							"sid": 825297233583344,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 156430933040731
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Companion",
+									"sid": 975225703732404,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"sliding\""
+									}
+								}
+							],
+							"sid": 357201801390227,
+							"disabled": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Companion",
+							"sid": 493407644861522,
+							"parameters": {
+								"instance-variable": "estado",
+								"comparison": 0,
+								"value": "\"run\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Companion",
+							"sid": 664967300708216,
+							"parameters": {
+								"instance-variable": "estado",
+								"comparison": 0,
+								"value": "\"sliding\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Companion",
+							"sid": 602997975077272,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Companion",
+							"sid": 853032659118065,
+							"parameters": {
+								"instance-variable": "startTimer",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 276842195630427,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Companion",
+									"sid": 717211564329561,
+									"parameters": {
+										"instance-variable": "direcao",
+										"comparison": 0,
+										"value": "\"right\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-vector-x",
+									"objectClass": "Companion",
+									"sid": 502645565429555,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-x": "Self.x + (1 * 50) * dt"
+									}
+								}
+							],
+							"sid": 713011897757117
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Companion",
+									"sid": 265803079389902,
+									"parameters": {
+										"instance-variable": "direcao",
+										"comparison": 0,
+										"value": "\"left\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-vector-x",
+									"objectClass": "Companion",
+									"sid": 890434804213136,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-x": "-Self.x + (1 * 50) * dt"
+									}
+								}
+							],
+							"sid": 555568904884461
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Companion",
+							"sid": 727475905103099,
+							"parameters": {
+								"instance-variable": "estado",
+								"comparison": 0,
+								"value": "\"idle\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Companion",
+							"sid": 994078779795454,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 294362652478932
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlayerBase",
+							"sid": 369680070204527,
+							"parameters": {
+								"object": "Stop"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 940328640761436,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Companion",
+									"sid": 591481226478395,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"idle\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Personagem",
+									"sid": 777752337253122,
+									"parameters": {
+										"instance-variable": "Estado",
+										"value": "\"idle\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "PlayerBase",
+									"sid": 436314019675194,
+									"parameters": {
+										"instance-variable": "timerStart",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 769145955739391,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 391980608892436,
+											"parameters": {
+												"variable": "steps",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Personagem",
+											"sid": 197674885817702,
+											"parameters": {
+												"instance-variable": "Direcao",
+												"value": "\"right\""
+											}
+										}
+									],
+									"sid": 220060181960415
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-function",
+							"objectClass": "Function",
+							"sid": 368327736771869,
+							"parameters": {
+								"name": "\"SeMexa\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PlayerBase",
+							"sid": 219524172936875,
+							"parameters": {
+								"instance-variable": "timerStart",
+								"value": "Function.Param(0)"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Amon",
+							"sid": 842964988737513,
+							"parameters": {
+								"instance-variable": "startTimer",
+								"value": "Function.Param(3)"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Krish",
+							"sid": 586342109599674,
+							"parameters": {
+								"instance-variable": "startTimer",
+								"value": "Function.Param(2)"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Personagem",
+							"sid": 213439389218579,
+							"parameters": {
+								"instance-variable": "Direcao",
+								"value": "Function.Param(1)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 744586638862226,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "DialogoCaixa",
+							"sid": 548359234777003
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Imagem",
+							"sid": 792992256038642
+						},
+						{
+							"id": "destroy",
+							"objectClass": "SpriteFont",
+							"sid": 201607755367079
+						},
+						{
+							"id": "destroy",
+							"objectClass": "NamesCharacters",
+							"sid": 996270375081534
+						}
+					],
+					"sid": 827660311254092
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PlayerBase",
+					"sid": 949095809705012,
+					"parameters": {
+						"object": "slide"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 257135680483148,
+					"parameters": {
+						"variable": "horaDoSlide",
+						"value": "true"
+					}
+				},
+				{
+					"id": "call-function",
+					"objectClass": "Function",
+					"sid": 136656223538386,
+					"parameters": {
+						"name": "\"sliding\"",
+						"parameter-n": []
+					}
+				}
+			],
+			"sid": 587737846887629
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Amon",
+					"sid": 956648047866316,
+					"parameters": {
+						"object": "slide"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "call-function",
+					"objectClass": "Function",
+					"sid": 353601272535239,
+					"parameters": {
+						"name": "\"slidingA\"",
+						"parameter-n": []
+					}
+				}
+			],
+			"sid": 341772832886910
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Krish",
+					"sid": 809655896669498,
+					"parameters": {
+						"object": "slide"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "call-function",
+					"objectClass": "Function",
+					"sid": 404542541983396,
+					"parameters": {
+						"name": "\"slidingK\"",
+						"parameter-n": []
+					}
+				}
+			],
+			"sid": 555837342146504
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-function",
+					"objectClass": "Function",
+					"sid": 804649207637416,
+					"parameters": {
+						"name": "\"sliding\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "PlayerBase",
+					"sid": 584221931772105,
+					"parameters": {
+						"instance-variable": "timerStart",
+						"value": "0.2"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Personagem",
+					"sid": 518446308884708,
+					"parameters": {
+						"angle": "313"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "PlayerBase",
+					"sid": 701758500792613,
+					"parameters": {
+						"angle": "313"
+					}
+				}
+			],
+			"sid": 496873199449488
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-function",
+					"objectClass": "Function",
+					"sid": 464501251851574,
+					"parameters": {
+						"name": "\"slidingA\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Amon",
+					"sid": 271860896754179,
+					"disabled": true,
+					"parameters": {
+						"instance-variable": "startTimer",
+						"value": "0.2"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Amon",
+					"sid": 644744008415588,
+					"parameters": {
+						"angle": "313"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Amon",
+					"sid": 497192666077293,
+					"parameters": {
+						"instance-variable": "estado",
+						"value": "\"sliding\""
+					}
+				}
+			],
+			"sid": 552990124810027
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-function",
+					"objectClass": "Function",
+					"sid": 619002234283344,
+					"parameters": {
+						"name": "\"slidingK\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Krish",
+					"sid": 848549983179526,
+					"disabled": true,
+					"parameters": {
+						"instance-variable": "startTimer",
+						"value": "0.2"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Krish",
+					"sid": 574743581787866,
+					"parameters": {
+						"angle": "313"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Krish",
+					"sid": 711606763585581,
+					"parameters": {
+						"instance-variable": "estado",
+						"value": "\"sliding\""
+					}
+				}
+			],
+			"sid": 246373097333895
+		}
+	],
+	"sid": 357896311860206
+}

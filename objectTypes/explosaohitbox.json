@@ -1,0 +1,37 @@
+{
+	"name": "ExplosaoHitbox",
+	"plugin-id": "Sprite",
+	"sid": 292788601611489,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 149,
+						"height": 149,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 189,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 519576733086408,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

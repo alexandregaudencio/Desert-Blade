@@ -1,0 +1,33 @@
+{
+	"name": "NameSkill",
+	"plugin-id": "Spritefont2",
+	"sid": 197277310284982,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Texto",
+			"type": "string",
+			"desc": "",
+			"sid": 756702736308359
+		},
+		{
+			"name": "Dialogoaberto",
+			"type": "boolean",
+			"desc": "",
+			"sid": 203353993827703
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 128,
+		"height": 256,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 210,
+		"useCollisionPoly": true
+	}
+}

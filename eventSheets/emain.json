@@ -16,6 +16,10 @@
 		{
 			"eventType": "include",
 			"includeSheet": "eCutscene"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Main ESheet"
 		}
 	],
 	"sid": 299678209265853

@@ -1,0 +1,14 @@
+{
+	"name": "Main ESheet",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "eMain"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Player ESheet"
+		}
+	],
+	"sid": 611654623922527
+}

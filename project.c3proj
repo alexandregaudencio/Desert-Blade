@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 23404,
+	"savedWithRelease": 24100,
 	"name": "Desert Blade",
 	"runtime": "c3",
 	"useWorker": "dom",
@@ -11,7 +11,7 @@
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -19,7 +19,7 @@
 			"id": "Spritefont2",
 			"name": "Sprite font",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -27,47 +27,7 @@
 			"id": "Tilemap",
 			"name": "Tilemap",
 			"author": "Scirra",
-			"version": "r234.4",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "Audio",
-			"name": "Audio",
-			"author": "Scirra",
-			"version": "r234.4",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "Function",
-			"name": "Function",
-			"author": "Scirra",
-			"version": "r234.4",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "Keyboard",
-			"name": "Keyboard",
-			"author": "Scirra",
-			"version": "r234.4",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "Dictionary",
-			"name": "Dictionary",
-			"author": "Scirra",
-			"version": "r234.4",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "gamepad",
-			"name": "Gamepad",
-			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -75,7 +35,7 @@
 			"id": "TiledBg",
 			"name": "Tiled Background",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -83,7 +43,47 @@
 			"id": "Arr",
 			"name": "Array",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Function",
+			"name": "Function",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Dictionary",
+			"name": "Dictionary",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "gamepad",
+			"name": "Gamepad",
+			"author": "Scirra",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -91,7 +91,7 @@
 			"id": "Platform",
 			"name": "Platform",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -99,7 +99,7 @@
 			"id": "Rotate",
 			"name": "Rotate",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -107,7 +107,7 @@
 			"id": "Physics",
 			"name": "Physics",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -115,7 +115,7 @@
 			"id": "Bullet",
 			"name": "Bullet",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -123,7 +123,7 @@
 			"id": "Flash",
 			"name": "Flash",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -131,7 +131,7 @@
 			"id": "Pin",
 			"name": "Pin",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -139,7 +139,7 @@
 			"id": "scrollto",
 			"name": "Scroll To",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -147,7 +147,7 @@
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -155,7 +155,7 @@
 			"id": "Sin",
 			"name": "Sine",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -163,7 +163,7 @@
 			"id": "EightDir",
 			"name": "8 Direction",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -171,7 +171,7 @@
 			"id": "LOS",
 			"name": "Line of sight",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -179,7 +179,7 @@
 			"id": "brightness",
 			"name": "Brightness",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -187,7 +187,7 @@
 			"id": "replacecolor",
 			"name": "Replace color",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		},
 		{
@@ -195,7 +195,7 @@
 			"id": "setcolor",
 			"name": "Set color",
 			"author": "Scirra",
-			"version": "r234.4",
+			"version": "r241",
 			"bundled": false
 		}
 	],
@@ -251,17 +251,6 @@
 					}
 				],
 				"name": "TileSet"
-			},
-			{
-				"items": [
-					"Audio",
-					"Function",
-					"Keyboard",
-					"Dictionary",
-					"Gamepad"
-				],
-				"subfolders": [],
-				"name": "Input and components"
 			},
 			{
 				"items": [
@@ -423,6 +412,23 @@
 				],
 				"subfolders": [],
 				"name": "OTHERS"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"Audio",
+							"Function",
+							"Keyboard",
+							"Dictionary",
+							"Gamepad"
+						],
+						"subfolders": [],
+						"name": "Input and components"
+					}
+				],
+				"name": "0Revised"
 			}
 		]
 	},
@@ -436,7 +442,13 @@
 			"Companion",
 			"IconesSkills"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": [],
+				"name": "Revised"
+			}
+		]
 	},
 	"layouts": {
 		"items": [
@@ -447,7 +459,15 @@
 			"Stage_1",
 			"ControlSection"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Main Layout"
+				],
+				"subfolders": [],
+				"name": "Revised"
+			}
+		]
 	},
 	"eventSheets": {
 		"items": [
@@ -459,7 +479,16 @@
 			"eTutorial",
 			"eControl"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Main ESheet",
+					"Player ESheet"
+				],
+				"subfolders": [],
+				"name": "Revised"
+			}
+		]
 	},
 	"rootFileFolders": {
 		"script": {
@@ -549,7 +578,13 @@
 					"sid": 285468981843166
 				}
 			],
-			"subfolders": []
+			"subfolders": [
+				{
+					"items": [],
+					"subfolders": [],
+					"name": "Revised"
+				}
+			]
 		},
 		"music": {
 			"items": [],

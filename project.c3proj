@@ -88,16 +88,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Platform",
-			"name": "Platform",
-			"author": "Scirra",
-			"version": "r241",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Rotate",
-			"name": "Rotate",
+			"id": "solid",
+			"name": "Solid",
 			"author": "Scirra",
 			"version": "r241",
 			"bundled": false
@@ -112,8 +104,40 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
 			"author": "Scirra",
 			"version": "r241",
 			"bundled": false
@@ -144,40 +168,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "solid",
-			"name": "Solid",
-			"author": "Scirra",
-			"version": "r241",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Sin",
-			"name": "Sine",
-			"author": "Scirra",
-			"version": "r241",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "EightDir",
-			"name": "8 Direction",
-			"author": "Scirra",
-			"version": "r241",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "LOS",
 			"name": "Line of sight",
-			"author": "Scirra",
-			"version": "r241",
-			"bundled": false
-		},
-		{
-			"type": "effect",
-			"id": "brightness",
-			"name": "Brightness",
 			"author": "Scirra",
 			"version": "r241",
 			"bundled": false
@@ -197,31 +189,20 @@
 			"author": "Scirra",
 			"version": "r241",
 			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "brightness",
+			"name": "Brightness",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
 		}
 	],
 	"uniqueId": "9jihr745wjs",
 	"objectTypes": {
 		"items": [],
 		"subfolders": [
-			{
-				"items": [
-					"Personagem",
-					"PersonagemHitbox",
-					"PlayerBase",
-					"Camera"
-				],
-				"subfolders": [
-					{
-						"items": [
-							"espada",
-							"Knife"
-						],
-						"subfolders": [],
-						"name": "projectiles"
-					}
-				],
-				"name": "Personagem"
-			},
 			{
 				"items": [
 					"groundsmoke",
@@ -426,6 +407,25 @@
 						],
 						"subfolders": [],
 						"name": "Input and components"
+					},
+					{
+						"items": [
+							"Personagem",
+							"PersonagemHitbox",
+							"PlayerBase",
+							"Camera"
+						],
+						"subfolders": [
+							{
+								"items": [
+									"espada",
+									"Knife"
+								],
+								"subfolders": [],
+								"name": "projectiles"
+							}
+						],
+						"name": "Personagem"
 					}
 				],
 				"name": "0Revised"
@@ -453,7 +453,6 @@
 	"layouts": {
 		"items": [
 			"Stage_0",
-			"LTest Room",
 			"LBank",
 			"LTest Room_2",
 			"Stage_1",
@@ -462,7 +461,8 @@
 		"subfolders": [
 			{
 				"items": [
-					"Main Layout"
+					"Main Layout",
+					"LTest Room"
 				],
 				"subfolders": [],
 				"name": "Revised"
@@ -472,7 +472,6 @@
 	"eventSheets": {
 		"items": [
 			"eSystem",
-			"eMain",
 			"eEnemies",
 			"eItens",
 			"eCutscene",
@@ -482,8 +481,8 @@
 		"subfolders": [
 			{
 				"items": [
-					"Main ESheet",
-					"Player ESheet"
+					"ePlayer",
+					"eMain"
 				],
 				"subfolders": [],
 				"name": "Revised"

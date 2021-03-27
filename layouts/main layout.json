@@ -36,5 +36,5 @@
 	"width": 480,
 	"height": 320,
 	"unboundedScrolling": false,
-	"eventSheet": "Main ESheet"
+	"eventSheet": null
 }
